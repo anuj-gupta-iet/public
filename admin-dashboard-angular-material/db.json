@@ -1,0 +1,63 @@
+{
+  "productList": [
+    {
+      "productName": "232",
+      "id": 1
+    },
+    {
+      "productName": "wqewq",
+      "productCategory": "Vegetables",
+      "productDate": "2022-07-19T23:00:00.000Z",
+      "productFreshness": "Second Hand",
+      "productPrice": 343,
+      "comments": "sdsad",
+      "id": 2
+    },
+    {
+      "productName": "sad",
+      "productCategory": "Vegetables",
+      "productDate": "2022-07-10T23:00:00.000Z",
+      "productFreshness": "Refurbished",
+      "productPrice": 2,
+      "comments": "2dsd",
+      "id": 3
+    },
+    {
+      "productName": "sdas",
+      "productCategory": "Vegetables",
+      "productDate": "2022-07-25T23:00:00.000Z",
+      "productFreshness": "Second Hand",
+      "productPrice": 33,
+      "comments": "dsdsd",
+      "id": 4
+    },
+    {
+      "productName": "qqq",
+      "productCategory": "Fruits",
+      "productDate": "2022-06-30T23:00:00.000Z",
+      "productFreshness": "Brand New",
+      "productPrice": 1,
+      "comments": "q",
+      "id": 5
+    },
+    {
+      "productName": "qweqw",
+      "productCategory": "Electronics",
+      "productDate": "2022-07-28T23:00:00.000Z",
+      "productFreshness": "Second Hand",
+      "productPrice": 4444,
+      "comments": "dsfs",
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
