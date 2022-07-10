@@ -1,0 +1,10 @@
+logging:
+  pattern:
+    console: '[%thread] %level - %msg%n'
+    
+spring:
+  datasource:
+    url: jdbc:h2:mem:proddb
+    
+server:
+  port: 8181
