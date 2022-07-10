@@ -1,0 +1,13 @@
+logging:
+  pattern:
+    console: '[%thread] %level - %msg%n'
+  level:
+    root: info
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+server:
+  port: 8761

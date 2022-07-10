@@ -1,0 +1,40 @@
+logging:
+  pattern:
+    console: '[%thread] %level - %msg%n'
+  level:
+    root: info
+
+server:
+  port: 9001
+
+spring:
+  application:
+    name: GATEWAY-SERVICE
+  cloud:
+    gateway:
+      routes:
+      - id: order-service
+        uri: lb://ORDER-SERVICE
+        predicates:
+        - Path=/order/**
+      - id: payment-service
+        uri: lb://PAYMENT-SERVICE
+        predicates:
+        - Path=/payment/**
+      - id: gpay-service
+        uri: lb://GPAY-SERVICE
+        predicates:
+        - Path=/gpay/**
+      - id: paypal-service
+        uri: lb://PAYPAL-SERVICE
+        predicates:
+        - Path=/paypal/**
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
