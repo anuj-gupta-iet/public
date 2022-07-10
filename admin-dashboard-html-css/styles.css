@@ -1,0 +1,370 @@
+/* palette used https://www.color-hex.com/color-palette/1294 */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+.main-header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: #011f4b;
+    /* border: 1px solid red; */
+    padding: 8px 0;
+    color: #fff;
+    font-weight: 600;
+}
+.client-name{
+    flex: 1;
+    padding-left: 5px;
+    /* border: 1px solid blue; */
+}
+.logo-container{
+    flex: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid blue; */
+}
+.logo-img{
+    width: 28px;
+}
+hr{
+    border: 0.2px solid #bfbfbf;
+}
+.header-container-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #011f4b;
+    /* border: 1px solid red; */
+    padding: 5px 5px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    color: #fff;
+    /* font-weight: 600; */
+}
+.header2{
+    padding: 0 5px;
+    border-left: 1px solid #bfbfbf;
+    /* border: 1px solid #0b3048; */
+}
+.header2 > div:first-of-type{
+    font-size: 11px;
+    padding-top: 5px;
+}
+.header2 > div:nth-of-type(2){
+    font-size: 15px;
+    padding: 5px 0;
+}
+.body-container{
+    display: flex;
+}
+.left-sidebar{
+    flex: 1;
+    position: sticky;
+    top: 105px;
+    margin: 5px 0 0 5px;
+    padding: 5px;
+    border-radius: 4px;
+    height: 100%;
+    /* background: rgb(160,160,158,.3); */
+    /* background: #042331 */
+    background: #011f4b;
+    /* width: 250px; */
+    /* position: fixed; */
+    
+}
+.left-sidebar > ul > li > a{
+    display: block;
+    text-decoration: none;
+    line-height: 40px;
+    font-size: 15px;
+    padding-left: 10px;
+    /* color: rgb(102,102,102); */
+    color: white;
+    /* border-top: 1px solid rgba(102,102,102,.1); */
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid black;
+    transition: .4s;
+}
+.left-sidebar > ul > li:hover > a{
+    padding-left: 15px;
+    background: #6497b1;
+}
+.left-sidebar ul i{
+    padding-left: 3px;
+}
+.left-sidebar > ul > li > ul > li > a{
+    display: block;
+    text-decoration: none;
+    line-height: 30px;
+    font-size: 13px;
+    padding-left: 20px;
+    color: white;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid black;
+    transition: .4s;
+}
+.left-sidebar > ul > li > ul > li:hover > a{
+    padding-left: 25px;
+    background: #6497b1;
+}
+.right-sidebar{
+    position: sticky;
+    top: 135px;
+    height: 100%;
+    /* position: fixed;
+    right: 3px;
+    top: 150px; */
+    /* z-index: 10; */
+    /* border: 1px solid red; */
+}
+.right-sidebar ul{
+    list-style-type: none;
+}
+.right-sidebar ul li a{
+    display: block;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    padding: 10px 10px;
+    margin-bottom: 2px;
+    background: #011f4b;
+    border-radius: 4px;
+    /* border: 1px solid red; */
+    transition: .4s;
+}
+.right-sidebar > ul > li:hover > a{
+    background: #6497b1;
+}
+.main-content{
+    flex: 4;
+    margin: 5px 5px;
+    padding: 5px;
+    border-radius: 4px;
+    height: 600px;
+    /* border: 1px solid red; */
+}
+.main-content h2{
+    color: #011f4b;
+}
+.section-heading{
+    background: #cccccc;
+    color: #011f4b;
+    padding: 15px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px 0;
+    /* font-size: 20px; */
+}
+.field-container{
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    margin: 0 15px 5px 15px;
+    /* margin-bottom: 5px; */
+    border-bottom: 1px solid rgba(191,191,191,.5);
+    /* border: 1px solid red; */
+}
+.field-heading{
+    flex: 1;
+    font-weight: bold;
+}
+.field-value{
+    flex: 1.5;
+}
+.field-value input[type=text]{
+    width: 70%;
+    padding: 8px;
+    
+    color: #0009;
+}
+.field-value textarea{
+    width: 70%;
+    padding: 8px;
+    resize: none;
+    color: #0009;
+}
+.field-value select{
+    width: 70%;
+    padding: 8px;
+    
+}
+.field-value .selector{
+    width: 70%;
+    position: relative;
+}
+#selectField{
+    width: 100%;
+    padding: 8px;
+    border-radius: 2px;
+    color: #0009;
+    font-size: 13px;
+    border: 1px solid #0007;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+#selectField i{
+    transition: transform .4s;
+}
+/* .ul-container{
+    /* width: 70%; 
+    border: 1px solid red;
+    position: relative;
+} */
+#list{
+    overflow-y: scroll;
+    height: 150px;
+    border-radius: 2px;
+    border: 1px solid #0007;
+    background: white;
+    width: 100%;
+    transition: .4s;
+    position: absolute;
+}
+.options{
+    padding: 8px;
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #0009;
+    font-size: 13px;
+}
+.options img{
+    width: 25px;
+    margin-right: 5px;
+}
+.options i{
+    margin-right: 5px;
+}
+.options:hover{
+    background: #ccc6;
+}
+.hide{
+    display: none;
+}
+.rotate{
+    transform: rotate(180deg);
+}
+.custom-scroll-div{
+    width: 70%;
+    height: 150px;
+    border: 1px solid #0007;
+    overflow-y: scroll;
+    padding: 8px;
+    color: #0009;
+    border-radius: 2px;
+}
+.custom-scroll-div::-webkit-scrollbar{
+    width: 10px;
+    background: rgb(241, 239, 239);
+}
+.custom-scroll-div::-webkit-scrollbar-thumb{
+    background: #0005;
+    border-radius: 8px;
+}
+.custom-scroll-div::-webkit-scrollbar-thumb:hover{
+    background: #0003;
+    border-radius: 8px;
+}
+.toggle-btn-container{
+    display: inline-flex;
+    align-items: flex-start;
+    border-radius: 4px;
+    border: 1px solid #0007;
+    background: rgba(241, 239, 239, .4);
+}
+.toggle-btn-container div{
+    padding: 8px;
+}
+.toggle-btn-container div:not(:first-child):not(:last-child){
+    border-left: 1px solid #0007;
+    border-right: 1px solid #0007;
+}
+.toggle-btn-container div:hover{
+    cursor: pointer;
+    background: rgba(241, 239, 239);
+}
+.toggle-btn-clicked{
+    background: #011f4b;
+    color: white;
+}
+.chkbox-container{
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+}
+.chkbox-container input[type="checkbox"]{
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    background: rgb(241, 239, 239);
+    border: 1px solid #0007;
+    margin-right: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+.chkbox-container input[type="checkbox"]::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 15px;
+    content: "\f00c";/* copy unicode from fontawesome */
+    color: white;
+    display: none;
+}
+.chkbox-container label{
+    margin-right: 12px;
+    cursor: pointer;
+}
+.chkbox-container input[type="checkbox"]:hover{
+    background: #aaa;/* ddd */
+}
+.chkbox-container input[type="checkbox"]:checked{
+    background: #014;
+}
+.chkbox-container input[type="checkbox"]:checked::after{
+    display: block;
+}
+.toggle-btn-chkbox, .toggle-btn-radio{
+    display: inline-flex;
+    border-radius: 4px;
+    border: 1px solid #0007;
+    background: rgba(241, 239, 239, .4);
+}
+.toggle-btn-chkbox input[type="checkbox"], 
+.toggle-btn-radio input[type="radio"]{
+    appearance: none;
+    /* outline: none; */
+}
+.toggle-btn-chkbox label, .toggle-btn-radio label{
+    padding: 8px;
+    cursor: pointer;
+}
+.toggle-btn-chkbox label:hover, .toggle-btn-radio label:hover{
+    background: #F1EFEF;
+}
+.toggle-btn-chkbox label:not(:first-child):not(:last-child),
+.toggle-btn-radio label:not(:first-child):not(:last-child){
+    border-right: 1px solid #0007;
+}
+.toggle-btn-chkbox input[type="checkbox"]:checked + label, 
+.toggle-btn-radio input[type="radio"]:checked + label{
+    color: white;
+    background: #011f4b;
+}

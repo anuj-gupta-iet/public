@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/7755d3bdd4.js" crossorigin="anonymous"></script>
+    <title>Admin Dashboard by Anuj</title>
+</head>
+<body>
+    <div class="main-header">
+        <div class="header-container">
+            <div class="client-name">
+                Client Name <i class="fa-solid fa-angle-up"></i>
+            </div>
+            <div class="logo-container">
+                <img src="images/logo.png" class="logo-img"> &nbsp; Customer Due Diligence
+            </div>
+            <div class="client-name">
+            </div>
+        </div>
+        <hr>
+        <div class="header-container-2">
+            <div class="header2">
+                <div>LFC ID</div>
+                <div>LFC0000000001234</div>
+            </div>
+            <div class="header2">
+                <div>ECID</div>
+                <div>018654836</div>
+            </div>
+            <div class="header2">
+                <div>CLIENT OWNER</div>
+                <div>DAVID HUNT</div>
+            </div>
+            <div class="header2">
+                <div>STATUS</div>
+                <div>Approved</div>
+            </div>
+            <div class="header2">
+                <div>CUSTOMER TYPE</div>
+                <div>Bank</div>
+            </div>
+            <div class="header2">
+                <div>RISK RATING</div>
+                <div>Low</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-container">
+        <div class="left-sidebar">
+            <ul>
+                <li><a href="#">Customer Information</a></li>
+                <li><a href="#">Product & Services</a></li>
+                <li><a href="#">Customer Due Diligence</a></li>
+                <li>
+                    <a href="#">Country Due Diligence <i class="fa-solid fa-angle-down"></i></a>
+                    <ul>
+                        <li><a href="#">India</a></li>
+                        <li><a href="#">United Kingdom</a></li>
+                        <li><a href="#">Belgium</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Related Parties</a></li>
+                <li><a href="#">Risk Summary</a></li>
+                <li><a href="#">Document Summary</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h2>Customer Information</h2>
+            <div class="section-heading">
+                Section 1 <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="field-container">
+                <div class="field-heading">
+                    Custom Check Box
+                </div>
+                <div class="field-value">
+                    <div class="chkbox-container">
+                        <input type="checkbox" id="check1">
+                        <label for="check1">Checkbox 1</label>
+                        <input type="checkbox" id="check2">
+                        <label for="check2">Checkbox 2</label>
+                        <input type="checkbox" id="check3">
+                        <label for="check3">Checkbox 3</label>
+                    </div>
+                </div>
+            </div>
+            <div class="field-container">
+                <div class="field-heading">
+                    Toggle Button Single select using Radio Button
+                </div>
+                <div class="field-value">
+                    <div class="toggle-btn-radio">
+                        <input type="radio" name="tglradio" id="tglradio1">
+                        <label for="tglradio1">Toggle Radio 1</label>
+                        <input type="radio" name="tglradio" id="tglradio2">
+                        <label for="tglradio2">Toggle Radio 2</label>
+                        <input type="radio" name="tglradio" id="tglradio3">
+                        <label for="tglradio3">Toggle Radio 3</label>
+                    </div>
+                </div>
+            </div>
+            <div class="field-container">
+                <div class="field-heading">
+                    Toggle Button Multiple select using Checkbox
+                </div>
+                <div class="field-value">
+                    <div class="toggle-btn-chkbox">
+                        <input type="checkbox" id="tglchk1">
+                        <label for="tglchk1">Toggle Checkbox 1</label>
+                        <input type="checkbox" id="tglchk2">
+                        <label for="tglchk2">Toggle Checkbox 2</label>
+                        <input type="checkbox" id="tglchk3">
+                        <label for="tglchk3">Toggle Checkbox 3</label>
+                    </div>
+                </div>
+            </div>
+            <div class="field-container">
+                <div class="field-heading">
+                    Toggle Button using Div
+                </div>
+                <div class="field-value">
+                    <div class="toggle-btn-container">
+                        <div class="toggle-option">Option 1</div>
+                        <div class="toggle-option">Option 2</div>
+                        <div class="toggle-option">Option 3</div>
+                    </div>
+                </div>
+            </div>
+            <div class="field-container">
+                <div class="field-heading">
+                    Customer Select Box
+                </div>
+                <!-- custom select box start -->
+                <div class="field-value">
+                    <div class="selector">
+                        <div id="selectField">
+                            <p id="selectText">Select Value</p>
+                            <i id="arrow-icon" class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <ul id="list" class="hide">
+                            <li class="options">
+                                <i class="fa-solid fa-beer-mug-empty"></i>
+                                <p>Beer Mug</p>
+                            </li>
+                            <li class="options">
+                                <i class="fa-solid fa-brush"></i>
+                                <p>Brush</p>
+                            </li>
+                            <li class="options">
+                                <i class="fa-solid fa-ghost"></i>
+                                <p>Ghost</p>
+                            </li>
+                            <li class="options">
+                                <i class="fa-solid fa-ice-cream"></i>
+                                <p>Ice Cream</p>
+                            </li>
+                            <li class="options">
+                                <i class="fa-solid fa-user-secret"></i>
+                                <p>Hacker</p>
+                            </li>
+                            <li class="options">
+                                <i class="fa-solid fa-socks"></i>
+                                <p>Socks</p>
+                            </li>
+                            <li class="options">
+                                <i class="fa-solid fa-virus"></i>
+                                <p>Virus</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- custom select box end -->
+            </div>
+			<div class="field-container">
+                <div class="field-heading">
+                    Custom Scroll Bar
+                </div>
+                <div class="field-value">
+                    <div class="custom-scroll-div">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque fugit in deleniti a nam reiciendis commodi. Cumque ipsum
+                        sapiente consectetur iure culpa? Ad cum molestiae fuga labore ab reiciendis dolorem nobis blanditiis, dolore, officiis asperiores
+                        harum sunt fugit porro delectus.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo at doloribus saepe ex veritatis porro, animi repudiandae quisquam
+                        ea cupiditate voluptatibus ullam voluptates odit, inventore placeat vel dolor amet nam.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ad repellat odit inventore quas neque recusandae. Accusantium,
+                        obcaecati excepturi. Dicta voluptas dolorem atque asperiores quae optio unde accusantium commodi, molestiae dolorum quibusdam
+                        vero aut doloremque consectetur, molestias vitae id officia illum ipsum aliquam sed assumenda minus nemo ipsa! Numquam ratione,
+                        rerum tempore beatae quidem corporis voluptatem deserunt, eius ea vel molestias eum tenetur aut magnam iusto, accusantium
+                        repellat quam alias odit necessitatibus natus dignissimos sed harum. Necessitatibus, dolorum libero? Distinctio repudiandae
+                        perspiciatis fugit in, dignissimos tempora aperiam quod hic maiores, modi debitis. Expedita fugiat error veniam libero magni
+                        non praesentium!
+                    </div>
+                </div>
+            </div>
+            <div class="field-container">
+                <div class="field-heading">
+                    Text Area
+                </div>
+                <div class="field-value">
+                    <textarea rows="4" placeholder="This is Text Area"></textarea>
+                </div>
+            </div>
+            <div class="field-container">
+                <div class="field-heading">
+                    Text Box
+                </div>
+                <div class="field-value">
+                    <input type="text" placeholder="This is Text Box">
+                </div>
+            </div>
+            <div class="section-heading">
+                Section 2 <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="field-container">
+                <div class="field-heading">
+                    Text Box
+                </div>
+                <div class="field-value">
+                    <input type="text" placeholder="This is Text Box">
+                </div>
+            </div>
+        </div>
+        <div class="right-sidebar">
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-wrench"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-floppy-disk"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-file-import"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-bug"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-triangle-exclamation"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
