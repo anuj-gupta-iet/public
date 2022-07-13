@@ -16,7 +16,7 @@ import {MatTableDataSource} from '@angular/material/table';
 export class AppComponent implements OnInit{
   title = 'admin-dashboard-angular-material';
   displayedColumns: string[] = ['id', 'productName', 'productCategory', 'productDate',
-    'productFreshness', 'productPrice', 'comments'];
+    'productFreshness', 'productPrice', 'comments', 'action'];
   dataSource!: MatTableDataSource<any>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -29,19 +29,49 @@ export class AppComponent implements OnInit{
     this.getAllProducts();
   }
 
-  openDialog() {
+  addProductDialog() {
     const dialogRef = this.dialog.open(AddProductDialogComponent, {
       width: '30%'
     });
 
     dialogRef.afterClosed().subscribe(result => {
       if(result){
-        this._snackBar.open(result,'', {
+        this.openSnackBar(result);
+        /*this._snackBar.open(result,'', {
           duration: 3000,//3 sec
           horizontalPosition: 'end',
           verticalPosition: 'top'
-        });
+        });*/
+        this.getAllProducts();
         console.log(`Dialog result: ${result}`);
+      }
+    });
+  }
+
+  editProductDialog(row: any) {
+    const dialogRef = this.dialog.open(AddProductDialogComponent, {
+      width: '30%',
+      data: row
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if(result){
+        this.openSnackBar(result);
+        this.getAllProducts();
+      }
+    });
+  }
+  
+  deleteProduct(id:number) {
+    this.http.deleteProduct(id)
+    .subscribe({
+      next:(res)=>{
+        console.log(res);
+        this.openSnackBar("Product Deleted Successfully");
+        this.getAllProducts();
+      },
+      error:()=>{
+        this.openSnackBar("Error while deleting Product");
+        console.log("Error while deleting Product");
       }
     });
   }
@@ -70,13 +100,13 @@ export class AppComponent implements OnInit{
     }
   }
 
-  openSnackBar(){
-    /* this._snackBar.openFromComponent(ProductStatusSnackBarComponent, {
+  openSnackBar(message: any){
+    this._snackBar.openFromComponent(ProductStatusSnackBarComponent, {
       duration: 3000,//3 sec
       horizontalPosition: 'end',
       verticalPosition: 'top',
-      data: 'Test Data'
-    }); */
+      data: message
+    });
     
   }
 }

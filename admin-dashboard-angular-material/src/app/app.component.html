@@ -4,7 +4,7 @@
   </button>
   <span>Admin Dashboard Angular Material</span>
   <span class="example-spacer"></span>
-  <button mat-raised-button color="warn" (click)="openDialog()">Add Product</button>
+  <button mat-raised-button color="warn" (click)="addProductDialog()">Add Product</button>
 </mat-toolbar>
 
 <div class="table-container">
@@ -57,7 +57,19 @@
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Comments </th>
           <td mat-cell *matCellDef="let row"> {{row.comments}} </td>
         </ng-container>
-      
+
+        <!-- Comments Column -->
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+          <td mat-cell *matCellDef="let row"> 
+              <button mat-icon-button color="primary" (click)="editProductDialog(row)" aria-label="Example icon button with a home icon">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-icon-button color="warn" (click)="deleteProduct(row.id)" aria-label="Example icon button with a home icon">
+                <mat-icon>delete</mat-icon>
+              </button>
+          </td>
+        </ng-container>
   
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
@@ -71,6 +83,6 @@
     <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
   </div>
 </div>
-<!-- <button mat-stroked-button (click)="openSnackBar()" aria-label="Show an example snack-bar">
+<!-- <button mat-stroked-button (click)="openSnackBar('Test Data')" aria-label="Show an example snack-bar">
   Open Snack Bar
 </button> -->

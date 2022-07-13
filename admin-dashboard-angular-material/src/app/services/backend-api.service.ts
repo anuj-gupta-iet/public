@@ -8,8 +8,14 @@ export class BackendApiService {
 
   constructor(private http: HttpClient) { }
 
-  saveProduct(data: any){
+  addProduct(data: any){
     return this.http.post<any>("http://localhost:3000/productList/", data);
+  }
+  updateProduct(id:number, data: any){
+    return this.http.put<any>("http://localhost:3000/productList/"+id, data);
+  }
+  deleteProduct(id:number){
+    return this.http.delete<any>("http://localhost:3000/productList/"+id);
   }
   getAllProduct(){
     return this.http.get<any>("http://localhost:3000/productList/");
