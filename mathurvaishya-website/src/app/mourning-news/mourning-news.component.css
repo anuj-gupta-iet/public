@@ -1,0 +1,71 @@
+.god-ganesh-prayer-read-more-btn {
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--dark-color);
+    padding: 10px 30px;
+    border: 2px solid var(--dark-color);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.god-ganesh-prayer-read-more-btn:hover {
+    transform: scale(0.98);
+}
+
+.mourning-news {
+    background-color: var(--homepage-section-bg-color);
+    padding: 30px;
+}
+
+.mourning-news-header {
+    text-align: center;
+}
+
+.mourning-news-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* border: 1px solid red; */
+    flex-wrap: wrap;
+}
+
+.mourning-news-flex > div {
+	width: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in;
+}
+
+.mourning-news-flex > div:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 450px) {
+	.events-grid {
+        grid-template-columns: auto;
+    }
+    .mourning-news {
+    	padding: 10px;
+	}
+	.mourning-news-flex > div {
+	    padding: 5px 10px;
+	}
+	h4 {
+		font-size: 14px;
+	}
+	.god-ganesh-prayer-read-more-btn {
+	    padding: 5px 15px;
+	    margin-top: 10px;
+	}
+}

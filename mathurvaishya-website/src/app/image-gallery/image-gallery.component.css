@@ -1,0 +1,117 @@
+.item-span-2 {
+	grid-column: span 2;
+}
+.item-span-3 {
+	grid-column: span 3;
+}
+
+/* *********************** */
+.grid-col-3 {
+    grid-template-columns: auto auto auto;
+}
+
+.grid-col-2 {
+    grid-template-columns: auto auto;
+}
+
+.grid-col-1 {
+    grid-template-columns: auto;
+}
+.image-gallery-grid-container {
+    display: grid;
+    grid-gap: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: center;
+    /* margin: 10px 60px; */
+    border-radius: 5px;
+    padding: 10px;
+    border: 2px solid var(--dark-color);
+}
+.prev-next-buttons {
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* border: 2px solid red; */
+}
+
+.editorial-read-more-btn {
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--dark-color);
+    padding: 10px 30px;
+    border: 2px solid var(--dark-color);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0px;
+}
+
+.editorial-read-more-btn:hover {
+    transform: scale(0.98);
+}
+
+.image-gallery-new1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.image-gallery-new {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    border: 2px solid blue;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    border: 2px solid red;
+}
+
+.image-gallery-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    border: 2px solid green;
+}
+
+/* Tablet 450 and below*/
+@media (max-width: 750px) {
+	.grid-col-2 {
+        grid-template-columns: auto;
+    }
+    .grid-col-3 {
+        grid-template-columns: auto;
+    }
+    .item-span-2, .item-span-3 {
+        grid-column: span 1;
+    }
+    /* .slide-11-item1, .slide-11-item4, .slide-13-item1, .slide-14-item1, .slide-15-item1, .slide-16-item1, .slide-17-item1, .slide-17-item4 {
+        grid-column: 1 / span 1;
+    } */
+}
+
+@media (max-width: 450px) {
+    .image-gallery-grid-container {
+        grid-gap: 5px;
+        margin: 5px 10px;
+        padding: 5px;
+    }
+    .editorial-read-more-btn {
+        padding: 5px 15px;
+    }
+    .prev-next-buttons {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}

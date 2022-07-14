@@ -1,0 +1,23 @@
+.matrimony-view-profile-btn {
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--dark-color);
+    padding: 5px 10px;
+    border: 2px solid var(--dark-color);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.matrimony-view-profile-btn:hover {
+    transform: scale(0.98);
+}
+
+.matrimony-view-profile-image {
+    cursor: pointer;
+}
+.matrimony-view-profile-image:hover {
+    transform: scale(0.98);
+}

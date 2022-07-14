@@ -1,0 +1,16 @@
+<div class="slideshow">
+	<div class="slideshow-flex-container">
+		<a class="prev" (click)="minusSlides()">&#10094;</a>&nbsp;&nbsp;
+		<div *ngFor="let slide of slidesArray" [ngClass]="visibleSlideNumber==slide.slidenumber? 'fade' : 'mySlides fade'">
+			<img src="assets/images/slideshow/slideshow_{{slide.slidenumber}}.jpg" style="width: 100%">
+			<div class="caption"><h5>{{slide.description}}</h5></div>
+		</div>
+		&nbsp;&nbsp;<a class="next" (click)="plusSlides()">&#10095;</a>
+	</div>
+	<div style="text-align: center">
+		<span *ngFor="let slide of slideSequence;let indexOfelement=index;" [ngClass]="visibleSlideNumber===slide? 'active dot' : 'dot'" (click)="currentSlide(indexOfelement)"></span>
+	</div>
+	<div style="text-align: center">
+		<a (click)="onMoreImagesClick()" class="editorial-read-more-btn">More Images</a>
+	</div>
+</div>

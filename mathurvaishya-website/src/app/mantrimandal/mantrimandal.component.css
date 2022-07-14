@@ -1,0 +1,112 @@
+.mantrimandal-data-grid-items {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in;
+    width: 150px;
+}
+.mantrimandal-data-grid-items:hover {
+    transform: translateY(-15px);
+    cursor: pointer;
+}
+
+.mantrimandal-data-grid {
+    display: flex;
+    flex-direction: row;
+    /* grid-template-columns: min-content min-content min-content min-content; */
+    /* justify-content: space-evenly; */
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+    grid-row-gap: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* position: relative;
+    top: -30px; */
+    /* border: 3px solid red; */
+}
+
+/* .mantrimandal-data-grid {
+    display: grid;
+    grid-template-columns: min-content min-content min-content min-content;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-row-gap: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+    top: -30px;
+} */
+
+.mantrimandal-head-grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    background-color: var(--primary-color);
+    padding-bottom: 20px;
+}
+
+.mantrimandal-skew {
+    height: 50px;
+    position: relative;
+    top: -20px;
+    background-color: var(--webpage-bg-color);
+    transform: skewY(-2deg);
+    margin-bottom: 5px;
+}
+
+.mantrimandal {
+    padding-bottom: 0px;
+}
+
+h2 {
+    color: #fff;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+p {
+    color: #fff;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+/* Tablets 850 to 450*/
+@media (max-width: 850px) {
+	.mantrimandal-data-grid {
+        grid-template-columns: min-content min-content;
+    }
+}
+
+/* Mobile 450 and below*/
+@media (max-width: 450px) {
+	.mantrimandal-data-grid {
+        top: -50px;
+        grid-row-gap: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+	/* .mantrimandal-data-grid {
+        grid-template-columns: max-content max-content;
+        margin-left: 10px;
+    	margin-right: 10px;
+        top: -50px;
+    } */
+    .mantrimandal-data-grid-items {
+	    padding: 10px;
+	    /* width: 120px; */
+	    /* margin: 10px; */
+	}
+    .mantrimandal-data-grid img {
+    	/* width: 120px;
+    	height: 140px; */
+    }
+    .mantrimandal-data-grid-items {
+	    padding: 10px;
+	    margin: 5px;
+	}
+}

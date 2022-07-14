@@ -1,0 +1,15 @@
+.test {
+	background-color: grey;
+	width: 80vw;
+}
+.bodydiv {
+    height:100vh;
+    display:flex; 
+    flex-direction:column;
+}
+
+.footerdiv {
+  background: #ffab62;
+  margin-top:auto; 
+}
+

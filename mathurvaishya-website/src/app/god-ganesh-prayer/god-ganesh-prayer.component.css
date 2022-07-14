@@ -1,0 +1,38 @@
+.god-ganesh-prayer-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: var(--homepage-section-bg-color);
+    padding: 30px;
+}
+
+.god-ganesh-prayer-grid-items {
+    text-align: center;
+    overflow: hidden;
+}
+
+.god-ganesh-prayer-grid-items > img {
+    margin-top: 10px;
+}
+
+.god-ganesh-prayer-read-more-btn {
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--dark-color);
+    padding: 10px 30px;
+    border: 2px solid var(--dark-color);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.god-ganesh-prayer-read-more-btn:hover {
+    transform: scale(0.98);
+}
+
+@media (max-width: 450px) {
+	.god-ganesh-prayer-grid {
+        grid-template-columns: auto;
+    }
+}

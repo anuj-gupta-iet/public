@@ -1,0 +1,60 @@
+<app-header></app-header>
+<div class="mahasabha">
+    <div class="mahasabha-head-grid-container">
+        <h2>Matrimony - View Profile</h2>
+    </div>
+    <div class="mahasabha-skew">
+    </div>
+    <div class="mahasabha-data-grid">
+        <div class="mahasabha-data-grid-left-item">
+            <img src="assets/images/matrimony/postcard/{{srNo}}.jpg" alt="">
+        </div>
+        <div class="mahasabha-data-grid-right-item" *ngIf="currentProfile.srno === srNo">
+            <h2>{{name}}</h2>
+            <div *ngFor="let ob of currentProfile.item">
+                <b>{{ob.header}}: </b>{{ob.value}}
+            </div>
+            <!-- <div>
+            	Date of Birth: 24 September 1989<br> : Pinahat (Agra)<br> :11:50 AM <br>Presently living in Agra<br> : Fair in colour<br> 5'4" : MBBS (S.N. Medical College, Agra) MS (DNB General Surgery) Doing from SBLS Civil Hospital Jalandhar, Punjab : Dancing, Listening Music, Outing Date of Birth Birth Place Time Complexion Height Qualification Hobbies Family Details Grand Father : Late Shri Kalyan Das Gupta : Smt. Indravati Gupta Grand Mother : Shri Shiv Narayan Gupta (Bussinessman) : Smt. Mamta Gupta (House wife) Father Mother Elder Brother & Bhabhi : Dr. Varun Gupta (MBBS, MD Medicine) Assisstant Professor (K.D. Medical College, Mathura) 9935958794 Mrs. Monika Gupta (MBA), Firozabad Younger Brother : Dr. Tarun Gupta, MBBS (M.L.B. Medical College Jhansi) MS (DNB Orthopaedies) doing from Indore Tauji & Taiji : Shri Chakomal Gupta (Pinahat) & Smt. Ramvati Gupta Shri Ram Sevak Gupta (Pinahat) & Smt. Beena Gupta : Dr. Ramniwas Gupta, M.S. (Surgeon) Dr. Meghmala Gupta, M.D. : Smt. Kushma Gupta w/o Shri LUmesh Chand Gupta (Bah) Chacha & Chachi ji Bua & Fufaji
+            </div>
+            <div>
+                <b>Date of Birth: </b>{{currentProfile.dob}}
+            </div>
+            <div>
+                <b>Time: </b>{{currentProfile.time}}
+            </div>
+            <div>
+                <b>Place of Birth: </b>{{currentProfile.birthPlace}}
+            </div>
+            <div>
+                <b>Height: </b>{{currentProfile.height}}
+            </div>
+            <div>
+                <b>Gotra: </b>{{currentProfile.gotra}}
+            </div>
+            <div>
+                <b>Qualification: </b>{{currentProfile.qualification}}
+            </div>
+            <div>
+                <b>Occupation: </b>{{currentProfile.occupation}}
+            </div>
+            <div>
+                <b>Father: </b>{{currentProfile.father}}
+            </div>
+            <div>
+                <b>Mother: </b>{{currentProfile.mother}}
+            </div>
+            <div>
+                <b>Brother/Sister: </b>{{currentProfile.brother_sister}}
+            </div>
+            <div>
+                <b>Address: </b>{{currentProfile.address}}
+            </div>
+            <div>
+                <b>Contact: </b>{{currentProfile.contact}}
+            </div> -->
+            <!-- <hr> -->
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

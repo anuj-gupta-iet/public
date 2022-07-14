@@ -1,0 +1,187 @@
+.god-ganesh-prayer-read-more-btn {
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--dark-color);
+    padding: 10px 30px;
+    border: 2px solid var(--dark-color);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.god-ganesh-prayer-read-more-btn:hover {
+    transform: scale(0.98);
+}
+
+.society-pride {
+    background-color: var(--homepage-section-bg-color);
+    padding: 30px;
+}
+
+.society-pride-header {
+    text-align: center;
+}
+
+.society-pride-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.society-pride-grid-item {
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease-in;
+}
+
+.society-pride-grid-item>div {
+    text-align: center;
+}
+
+.society-pride-grid-item:hover {
+    transform: translateY(-5px);
+}
+
+.society-pride-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.society-pride-flex>div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in;
+}
+
+.society-pride-flex>div:hover {
+    transform: translateY(-5px);
+}
+
+.society-pride-flex-item {
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    cursor: pointer;
+    transition: transform 0.2s ease-in;
+}
+
+.society-pride-flex-item>div {
+    text-align: left;
+}
+
+.society-pride-flex-item:hover {
+    transform: translateY(-5px);
+}
+
+.society-pride-flex-item>img {
+    margin-right: 10px;
+}
+
+.events-read-more-btn {
+    font-size: 15px;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--dark-color);
+    border: 2px solid var(--dark-color);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+/* anuj */
+
+/* .events-header {
+    grid-column: 1 / span 3;
+    text-align: center;
+}
+
+.event-5 {
+    grid-column: 2 / span 2;
+}
+
+.events-grid-items {
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    cursor: pointer;
+    transition: transform 0.2s ease-in;
+}
+
+.events-grid-items:hover {
+    transform: translateY(-5px);
+}
+
+.events-grid-items>img {
+    margin-right: 10px;
+}
+
+.events-read-more-btn {
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--dark-color);
+    padding: 10px 30px;
+    border: 2px solid var(--dark-color);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.events-read-more-btn:hover {
+    transform: scale(0.98);
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: var(--homepage-section-bg-color);
+    padding: 30px;
+    grid-gap: 10px;
+} */
+
+@media (max-width: 450px) {
+	.society-pride {
+	    padding: 10px;
+	}
+    .events-grid {
+        grid-template-columns: auto;
+    }
+
+    .society-pride-grid {
+        grid-template-columns: auto;
+    }
+    
+    .society-pride-grid-item {
+	    border-radius: 10px;
+	    padding: 10px;
+	    margin: 5px;
+	}
+	.god-ganesh-prayer-read-more-btn {
+	    padding: 5px 15px;
+	    margin-top: 10px;
+	}
+}

@@ -1,0 +1,104 @@
+<div class="bodydiv" [ngClass]="(isGroomBtnClicked || isBrideBtnClicked)? 'classperc' : 'classvh'">
+<app-header></app-header>
+<div class="matrimony">
+    <div class="matrimony-head-grid-container">
+        <h2>Matrimony</h2>
+        <p>A matchmaking service for Mathurvaishya prople which matches and facilitates meetings between prospects.</p>
+        <p>Matrimony website visitors are advised to verify details of advertisements on their own.<!--  This website does not vouch or subscribe to the claims made by them regarding Status, Age, Income etc. of the Bride/Groom. --></p>
+        <p>For Registering a profile in this Matrimony website, kindly send profile to scgupta45@gmail.com <a href="assets/MatrimonyProfileFormat.xlsx">(Download Format from here)</a>, or click on Submit Profile button, provide your Gmail credentials and submit details of Bride/Groom.</p>
+    </div>
+    <!-- <div class="matrimony-skew">
+    </div> -->
+    <div class="matrimony-bride-groom-flex-container">
+        <a (click)="onGroomBtnClick()" [ngClass]="isGroomBtnClicked? 'btn-stay-clicked' : ''" class="btn">Grooms</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6rS8xtdPXn6MWDI__s393icfjOTBRAw_YxYzt830FzPTz8A/viewform" class="editorial-read-more-btn" target="_blank">Submit Profile</a>
+        <a (click)="onBrideBtnClick()" [ngClass]="isBrideBtnClicked? 'btn-stay-clicked' : ''" class="btn">Brides</a>
+    </div>
+    <div class="matrimony-data-container">
+        <ag-grid-angular *ngIf="isGroomBtnClicked"
+            style="width: 100%;" 
+            class="ag-theme-balham"
+            [columnDefs]="columnDefs" 
+            [rowData]="groomRowData"
+            [gridOptions]="gridOptions"
+            [domLayout]="domLayout"
+            [frameworkComponents]="frameworkComponents"
+            (gridSizeChanged)="onGridSizeChanged($event)"
+            [getRowHeight]="getRowHeight"
+            (gridReady)="onGridReady($event)"
+            [pagination]="true"
+            [paginationPageSize]="10">
+        </ag-grid-angular>
+        <!-- [pagination]="true"
+            [paginationPageSize]="10"
+            [floatingFilter]="true" -->
+        <ag-grid-angular *ngIf="isBrideBtnClicked"
+            style="width: 100%;" 
+            class="ag-theme-balham"
+            [columnDefs]="columnDefs" 
+            [rowData]="brideRowData"
+            [gridOptions]="gridOptions"
+            [domLayout]="domLayout"
+            [frameworkComponents]="frameworkComponents"
+            (gridSizeChanged)="onGridSizeChanged($event)"
+            [getRowHeight]="getRowHeight"
+            (gridReady)="onGridReady($event)"
+            [pagination]="true"
+            [paginationPageSize]="10">
+        </ag-grid-angular>
+    </div>
+    <!-- Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content<br>
+    Content1<br>
+    Content2<br>
+    Content3<br>
+    Content4<br>
+    Content5<br>
+    Content6<br>
+    Content7<br>
+    Content8<br>
+    Content9<br>
+    Content1<br>
+    Content2<br>
+    Content3<br>
+    Content4<br>
+    Content<br> -->
+    
+    <!-- <div class="submit-matrimony-profile-container">
+    	<a href="https://docs.google.com/forms/d/e/1FAIpQLSe6rS8xtdPXn6MWDI__s393icfjOTBRAw_YxYzt830FzPTz8A/viewform" class="editorial-read-more-btn" target="_blank">Submit Profile</a>
+    </div> -->
+</div>
+
+<div class="footerdiv">
+<app-footer></app-footer>
+</div>
+</div>

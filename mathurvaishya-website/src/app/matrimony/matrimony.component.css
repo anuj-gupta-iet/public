@@ -1,0 +1,132 @@
+.classvh {
+    height:100vh;
+}
+.classperc {
+    height:100%;
+}
+.bodydiv {
+    display:flex; 
+    flex-direction:column;
+}
+
+.footerdiv {
+  margin-top:auto;
+}
+
+.submit-matrimony-profile-container {
+	text-align: center;
+}
+
+.editorial-read-more-btn {
+	/* position: relative;
+	top: -10px; */
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--dark-color);
+    padding: 10px 30px;
+    border: 2px solid var(--dark-color);
+    border-radius: 5px;
+    cursor: pointer;
+    /* margin-top: 20px; */
+}
+
+.editorial-read-more-btn:hover {
+    transform: scale(0.98);
+}
+
+.matrimony-data-container {
+    /* border: 3px solid red; */
+    margin-left: 20px;
+    margin-right: 20px;
+    display: block;
+    overflow: auto;
+}
+
+.matrimony-bride-groom-flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* position: relative;
+    top: -30px; */
+}
+
+.btn {
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--dark-color);
+    padding: 10px 30px;
+    border: 2px solid var(--dark-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--dark-color);
+    color: #fff;
+}
+
+.btn-stay-clicked {
+    background-color: var(--dark-color);
+    color: #fff;
+}
+
+.matrimony {
+    padding-bottom: 10px;
+    height: 100%;
+}
+
+.matrimony-head-grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    /* height: 100px; */
+    background-color: var(--primary-color);
+    padding-bottom: 20px;
+    /* border-top: 1px solid #fff; */
+    /* border: 3px solid red; */
+}
+
+.matrimony-head-grid-container p a{
+	/* text-decoration: none; */
+	color: white;
+}
+
+.matrimony-head-grid-container p a:hover{
+	font-weight: bold;
+}
+
+.matrimony-skew {
+    height: 50px;
+    position: relative;
+    top: -20px;
+    background-color: var(--webpage-bg-color);
+    transform: skewY(-2deg);
+    margin-bottom: 5px;
+    /* border: 3px solid blue; */
+}
+
+h2 {
+    color: #fff;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+p {
+    color: #fff;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+@media (max-width: 450px) {
+	.btn {
+	    padding: 5px 15px;
+	}
+	.editorial-read-more-btn {
+	    padding: 5px 15px;
+	    /* margin-top: 10px; */
+	}    
+}
