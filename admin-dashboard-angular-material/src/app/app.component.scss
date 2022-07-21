@@ -11,7 +11,35 @@ table {
 .table-container{
     margin: 0 20px;
 }
-
-/* .add-product-btn:hover{
-    background-color: rgb(243, 145, 138);
+mat-sidenav-content{
+    height: 88vh;
+}
+.custom-scroll-div{
+    width: 200px; 
+    height: 88vh; 
+    overflow-y: auto;
+}
+.custom-scroll-div::-webkit-scrollbar{
+    width: 5px;
+    background: #f2f2f2;
+}
+.custom-scroll-div::-webkit-scrollbar-thumb{
+    background: #bfbfbf;
+    border-radius: 8px;
+}
+.custom-scroll-div::-webkit-scrollbar-thumb:hover{
+    background: #b3b3b3;
+}
+.sidebar-icon{
+    margin-right: 10px;
+}
+.mat-sidenav-content-container{
+    /* border: 1px solid blueviolet; */
+    padding: 10px;
+    /* padding-left: 10px; */
+}
+/* mat-sidenav-content{
+    /* border: 1px solid red; 
+    padding-top: 10px;
+    padding-left: 10px;
 } */

@@ -110,6 +110,13 @@ E:\Program Files\EclipseWorkspace\admin-dashboard-angular-material\src\app\app.c
 <td mat-cell *matCellDef="let row"> {{row.productDate | date}} </td>
 <td mat-cell *matCellDef="let row"> {{row.productPrice | currency}} </td>
 
+## Creating material module 
+E:\Program Files\EclipseWorkspace\admin-dashboard-angular-material>ng g m material
+CREATE src/app/material/material.module.ts (194 bytes)
+
+## Remove unused imports in vscode
+Shift + Alt + O
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

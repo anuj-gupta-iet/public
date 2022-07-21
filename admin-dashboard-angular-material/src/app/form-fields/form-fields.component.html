@@ -1,0 +1,118 @@
+<div class="row-container">
+    <div>
+        <mat-form-field class="example-full-width" appearance="fill" floatLabel="always">
+            <mat-label>Text Box</mat-label>
+            <input matInput placeholder="Enter Text" [(ngModel)]="textBox">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="example-full-width" appearance="fill" floatLabel="always">
+            <mat-label>Text Box with Clearable button</mat-label>
+            <input matInput type="text" [(ngModel)]="textBoxWithClear">
+            <button *ngIf="textBoxWithClear" matSuffix mat-icon-button aria-label="Clear" (click)="textBoxWithClear=''">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
+    </div>
+    <div class="last-div">
+        Text Box Value: {{textBox}}
+    </div>
+</div>
+<div class="row-container">
+    <div>
+        <mat-form-field class="example-full-width" appearance="fill" floatLabel="always">
+            <mat-label>Select Box</mat-label>
+            <mat-select [(value)]="selectBoxSelectedValue">
+                <mat-option *ngFor="let value of selectBoxValues" [value]="value">
+                    {{value}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="example-full-width" appearance="fill" floatLabel="always">
+            <mat-label>Select Box with Autocomplete</mat-label>
+            <input type="text" aria-label="Number" matInput [formControl]="selectBoxWithAutocompleteControl" [matAutocomplete]="auto">
+            <button matSuffix mat-icon-button>
+                <mat-icon>keyboard_arrow_down</mat-icon>
+            </button>
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{option}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </div>
+    <div class="last-div" style="flex: 2 !important;">
+        Select Box Value: {{selectBoxSelectedValue}}
+        <br> Select Box with Autocomplete Value: {{selectBoxWithAutocompleteControl.value}}
+    </div>
+</div>
+<div class="row-container" style="padding-bottom: 15px;">
+    <div>
+        <h4>Single selection</h4>
+        <mat-button-toggle-group name="favoriteColor" aria-label="Favorite Color" [(ngModel)]="singleSelectToggleBtn">
+            <mat-button-toggle value="red">Red</mat-button-toggle>
+            <mat-button-toggle value="green">Green</mat-button-toggle>
+            <mat-button-toggle value="blue">Blue</mat-button-toggle>
+        </mat-button-toggle-group>
+        </div>
+        <div>
+            <h4>Multi selection</h4>
+            <mat-button-toggle-group name="ingredients" aria-label="Ingredients" multiple [formControl]="multiSelectToggleBtnControl">
+                <mat-button-toggle value="flour">Flour</mat-button-toggle>
+                <mat-button-toggle value="eggs">Eggs</mat-button-toggle>
+                <mat-button-toggle value="sugar">Sugar</mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+    <div class="last-div" style="flex: 4 !important;">
+        Select Box Value: {{singleSelectToggleBtn}}
+        <br> Select Box with Autocomplete Value: {{multiSelectToggleBtnControl.value}}
+    </div>
+</div>
+<div class="row-container custom-input-element align-left" style="padding-bottom: 10px;">
+    <div>Custom Text Box</div>
+    <div>
+        <mat-form-field class="example-full-width" appearance="outline" floatLabel="never">
+            <input matInput [(ngModel)]="customTextBox">
+        </mat-form-field>
+    </div>
+    <div class="last-div">
+        Text Entered: {{customTextBox}}
+    </div>
+</div>
+<!-- <div class="row-container">
+    <mat-divider></mat-divider>
+</div> -->
+<!-- <div class="container">
+    <div>Select Box</div>
+    <div>
+        <mat-form-field appearance="outline">
+            <mat-label>Favorite food</mat-label>
+            <mat-select>
+                    <mat-option value="1">1</mat-option>
+                    <mat-option value="2">2</mat-option>
+                    <mat-option value="3">3</mat-option>
+                <mat-option *ngFor="let food of foods" [value]="food.value">
+                    {{food.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div>
+        Text Entered: {{inputElement}}
+    </div>
+</div> -->
+
+<!-- <div style="border: 1px solid sienna; padding: 10px;">
+    Outer
+    <div style="border: 1px solid orchid; padding: 7px;">
+        Inner
+        <div style="border: 1px solid plum; padding: 5px;">
+            33
+        </div>
+    </div>
+</div>
+<div class="mydiv">
+    111
+</div> -->

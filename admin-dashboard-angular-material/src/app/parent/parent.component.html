@@ -1,0 +1,7 @@
+<div class="parent-container">
+    <h2>Parent Component</h2>
+    Parent Property: <input type="text" [(ngModel)]="parentToChildProperty" style="padding: 10px;">
+    <br><br>
+    Value from Child Component: {{childToParentProperty}}
+    <app-child [parentToChildProperty]="parentToChildProperty" (childToParentPropertyEvent)="receiveFromChild($event)"></app-child>
+</div>

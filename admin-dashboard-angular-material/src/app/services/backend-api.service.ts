@@ -20,4 +20,7 @@ export class BackendApiService {
   getAllProduct(){
     return this.http.get<any>("http://localhost:3000/productList/");
   }
+  getCountries(){
+    return this.http.get<any>("http://localhost:3000/countryList/");
+  }
 }

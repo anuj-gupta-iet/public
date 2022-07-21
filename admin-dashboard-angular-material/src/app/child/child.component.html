@@ -1,0 +1,9 @@
+<div class="child-container">
+    <h2>Child Component</h2>
+    Value from Parent Component: {{parentToChildProperty}}
+    <br>
+    Child Property: 
+    <input type="text" [(ngModel)]="childToParentProperty" (input)="sendToParent()" style="padding: 10px;">
+    <!-- <input type="text" #childToParentProperty style="padding: 10px;">
+    <button (click)="sendToParent(childToParentProperty.value)" class="btnClass">Send to Parent</button> -->
+</div>

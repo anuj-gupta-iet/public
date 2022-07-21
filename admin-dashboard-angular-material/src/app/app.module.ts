@@ -6,52 +6,33 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MaterialModule } from './material/material.module';
 
 import { AddProductDialogComponent } from './add-product-dialog/add-product-dialog.component';
 import { ProductStatusSnackBarComponent } from './product-status-snack-bar/product-status-snack-bar.component';
-
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatSelectModule} from '@angular/material/select';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatNativeDateModule} from '@angular/material/core';
-import {MatRadioModule} from '@angular/material/radio';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-import {MatTableModule} from '@angular/material/table';
-import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatSortModule} from '@angular/material/sort';
+import { FormFieldsComponent } from './form-fields/form-fields.component';
+import { ProductCrudComponent } from './product-crud/product-crud.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddProductDialogComponent,
-    ProductStatusSnackBarComponent
+    ProductStatusSnackBarComponent,
+    FormFieldsComponent,
+    ProductCrudComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatRadioModule,
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    MatSnackBarModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
