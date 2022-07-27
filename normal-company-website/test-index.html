@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/7755d3bdd4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">1</div>
+    <div class="box1">
+        <i class="fa-solid fa-angles-left"></i>
+    </div>
+    <button>Click Me</button>
+</body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    button{
+        margin-left: 50px;
+        padding: 10px 20px;
+        border: 1px solid green;
+        background: green;
+        color: white;
+        cursor: pointer;
+        border-radius: 2px;
+        /* font-weight: bold; */
+        font-family: 'Poppins', sans-serif;
+        transition: 0.4s;
+    }
+    button:hover{
+        border: 1px solid rgba(0,128,0, 0.7);
+        background: rgba(0,128,0, 0.7);
+        box-shadow: 0 0 10px 0px rgba(0,0,0,0.5);
+    }
+    .header{
+        min-height: 50%;
+        width: 100%;
+        display: block;
+        background-color: bisque;
+    }
+    .box1{
+        margin: 20% 0 0 20%;
+        /* border: 1px solid red; */
+    }
+    .fa-solid{
+        transition: 0.3s;
+    }
+    .fa-solid:hover{
+        color: red;
+        transform: rotate(180deg);
+    }
+</style>
+</html>

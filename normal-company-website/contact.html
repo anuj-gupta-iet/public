@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>University Website design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7755d3bdd4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<section class="sub-header">
+    <nav>
+        <a href="index.html"><img src="images/logo.png" alt=""></a>
+        <div class="nav-links" id="navLinks">
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="about_us.html">ABOUT</a></li>
+                <li><a href="">COURSE</a></li>
+                <li><a href="">BLOG</a></li>
+                <li><a href="">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav> 
+    <h1>Contact Us</h1>
+</section>
+
+<!-- contact us content -->
+<section class="location">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2238.6586233529883!2d-4.292792584424286!3d55.86858908058445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488845d16be594e9%3A0x5258b27cf1ca9ffe!2sKelvingrove%20Art%20Gallery%20and%20Museum!5e0!3m2!1sen!2suk!4v1658666538566!5m2!1sen!2suk"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<section class="contact-us">
+    <div class="row">
+        <div class="contact-col">
+            <div>
+                <i class="fa-solid fa-house"></i>
+                <span>
+                    <h5>XYZ Road, ABC Building</h5>
+                    <p>Glasgow, UK</p>
+                </span>
+            </div>
+            <div>
+                <i class="fa-solid fa-phone"></i>
+                <span>
+                    <h5>+44 7654324567</h5>
+                    <p>Monday to Saturday, 10AM to 6PM</p>
+                </span>
+            </div>
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <span>
+                    <h5>info@gmail.com</h5>
+                    <p>Email your Query</p>
+                </span>
+            </div>
+        </div>
+        <div class="contact-col">
+            <form action="">
+                <input type="text" placeholder="Enter Name">
+                <input type="text" placeholder="Enter Email">
+                <input type="text" placeholder="Enter Subject">
+                <textarea rows="5" placeholder="Your Comments"></textarea>
+                <button class="hero-btn red-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<!-- footer -->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Optio exercitationem ipsum accusamus earum modi magnam eos sint tenetur, dolores harum.</p>
+    <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+    </div>
+    <p>Copyright <i class="fa-regular fa-copyright"></i> Anuj Gupta</p>
+</section>
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right="0";
+    }
+    function hideMenu(){
+        navLinks.style.right="-200px";
+    }
+</script>
+</body>
+</html>

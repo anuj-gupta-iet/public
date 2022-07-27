@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/7755d3bdd4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="page-container">
+        <div id="formBoxId" class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button class="toggle-btn" onclick="loginFunc()">Log In</button>
+                <button class="toggle-btn" onclick="registerFunc()">Register</button>
+            </div>
+            <div class="social-media">
+                <i class="fa-brands fa-square-facebook gradient-icon"></i>
+                <i class="fa-brands fa-square-twitter gradient-icon"></i>
+                <i class="fa-brands fa-square-google-plus gradient-icon"></i>
+            </div>
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="User Id">
+                <input id="passwordHandle" type="password" class="input-field" placeholder="Enter Password">
+                <i id="eye" class="fa-solid fa-eye" onclick="eyeFunc()"></i>
+
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button class="submit-btn">Log in</button>
+            </form>
+            <form id="register" class="input-group">
+                <input type="text" class="input-field" placeholder="User Id">
+                <input type="text" class="input-field" placeholder="Email Id">
+                <input type="password" class="input-field" placeholder="Enter Password">
+                <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+                <button class="submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+<script>
+    var login = document.getElementById("login");
+    var register = document.getElementById("register");
+    var btn = document.getElementById("btn");
+    var formBox = document.getElementById("formBoxId");
+
+    function registerFunc(){
+        login.style.left = "-400px";
+        register.style.left = "50px";
+        btn.style.left = "110px";
+        formBox.style.height = "460px";
+    }
+    function loginFunc(){
+        login.style.left = "50px";
+        register.style.left = "450px";
+        btn.style.left = "0px";
+        formBox.style.height = "420px";
+    }
+
+    var eye = document.getElementById("eye");
+    var passwordHandle = document.getElementById("passwordHandle");
+    var state = false;
+    function eyeFunc(){
+        console.log(passwordHandle);
+        console.log(passwordHandle.type);
+        if(state){
+            state = false;
+            passwordHandle.type="password";
+            eye.classList.toggle("fa-eye");
+            eye.classList.toggle("fa-eye-slash");
+        }else{
+            state = true;
+            passwordHandle.type="text";
+            eye.classList.toggle("fa-eye");
+            eye.classList.toggle("fa-eye-slash");
+        }
+    }
+</script>
+</body>
+</html>
