@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7755d3bdd4.js" crossorigin="anonymous"></script>
+    <title>Muti Step Progress Bar</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Multi Step Progress Bar</h1>
+        <div class="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="circle active"><i class="fa-solid fa-circle-nodes"></i></div>
+            <div class="circle"><i class="fa-solid fa-cube"></i></div>
+            <div class="circle"><i class="fa-solid fa-font-awesome"></i></div>
+            <div class="circle"><i class="fa-solid fa-cubes"></i></div>
+        </div>
+        <button class="btn" id="prev" onclick="prevClick()" disabled>Prev</button>
+        <button class="btn" id="next" onclick="nextClick()">Next</button>
+    </div>
+
+    <script>
+        const progress = document.getElementById("progress");
+        const prev = document.getElementById("prev");
+        const next = document.getElementById("next");
+        const circles = document.querySelectorAll(".circle");
+        let currentActive = 1;
+        function nextClick(){
+            currentActive++;
+            if(currentActive>circles.length){
+                currentActive=circles.length;
+            }
+            update();
+        }
+        function prevClick(){
+            currentActive--;
+            if(currentActive<1){
+                currentActive=1;
+            }
+            update();
+        }
+
+        function update(){
+            circles.forEach((circle, index)=>{
+                if(index<currentActive){
+                    circle.classList.add("active");
+                }else{
+                    circle.classList.remove("active");
+                }
+            });
+            const actives = document.querySelectorAll(".active");
+            let updatedPrecentage = ((actives.length-1)/(circles.length-1))*100;
+            console.log(updatedPrecentage);
+            progress.style.width = updatedPrecentage + "%";
+
+            if(currentActive===1){
+                prev.disabled = true;
+            } else if(currentActive===circles.length){
+                next.disabled = true;
+            } else{
+                prev.disabled = false;
+                next.disabled = false;
+            }
+        }
+
+        
+    </script>
+</body>
+</html>

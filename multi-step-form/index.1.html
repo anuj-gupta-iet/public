@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7755d3bdd4.js" crossorigin="anonymous"></script>
+    <title>Muti Step Form</title>
+</head>
+<body>
+    
+    <div class="page-container">
+        <div class="progress-bar-container">
+            <div class="progress-bar"></div>
+            <ul>
+                <li class="active"><i class="fa-solid fa-circle-nodes"></i></li>
+                <li><i class="fa-solid fa-cube"></i></li>
+                <li><i class="fa-solid fa-font-awesome"></i></li>
+            </ul>
+            <div class="btn-container">
+                <button>Prev</button>
+                <button onclick="next()">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const steps = document.getElementsByTagName("ul::after");
+        console.log(steps); 
+        
+        let currentCount = 0;
+        function next(){
+            steps.width = "100%";
+            /* console.log("hello");
+            currentCount++;
+            Array.from(steps).forEach((step, index) => {
+                if(index==currentCount){
+                    step.classList.add("active");
+                }
+                console.log(index); 
+            }); */
+        }
+    </script>
+
+    <!-- <section class="step-wizard">
+        <ul class="step-wizard-list">
+            <li class="step-wizard-item">
+                <span class="progress-count">1</span>
+                <span class="progress-label">Billing Info</span>
+            </li>
+            <li class="step-wizard-item">
+                <span class="progress-count">2</span>
+                <span class="progress-label">Payment Method</span>
+            </li>
+            <li class="step-wizard-item">
+                <span class="progress-count">3</span>
+                <span class="progress-label">Checkout</span>
+            </li>
+            <li class="step-wizard-item">
+                <span class="progress-count">4</span>
+                <span class="progress-label">Success</span>
+            </li>
+        </ul>
+    </section> -->
+
+    <!-- <form action="" class="form">
+        <div class="form-step sorm-step-active">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username">
+            </div>
+            <div class="input-group">
+                <label for="position">Position</label>
+                <input type="text" name="position" id="position">
+            </div>
+            <div>
+                <a href="#" class="btn btn-next">Next</a>
+            </div>
+        </div>
+    </form> -->
+</body>
+</html>

@@ -1,0 +1,69 @@
+.flex-div{
+    /* border: 1px solid burlywood; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-div div{
+    /* border: 1px solid brown; */
+}
+#logo_icon{
+    width: 120px;
+    padding: 18px 14px;
+}
+i{
+    cursor: pointer;
+}
+#search{
+    width: 300px;
+    padding: 10px 10px;
+    border: 1px solid #ccc;
+    /* color: #ccc; */
+    outline: 0;
+}
+.search-container{
+    /* border: 1px solid red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.search-container > *{
+    /* border: 1px solid brown !important; */
+}
+.fa-magnifying-glass{
+    position: absolute;
+    left: 275px;
+}
+.fa-microphone{
+    /* width: 40px;
+    height: 40px; */
+    margin-left: 10px;
+    padding: 10px;
+    background: rgba($color: #ccc, $alpha: 0.3);
+    border-radius: 50%;
+}
+.right{
+    /* border: 1px solid brown; */
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+.right i, .right img{
+    margin: 0 10px;
+}
+.fa-video{
+    padding: 10px;
+    background: rgba($color: #ccc, $alpha: 0.3);
+    border-radius: 50%;
+}
+#profile_pic{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+/* #create-video{
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    background: rgba($color: #ccc, $alpha: 0.3);
+} */

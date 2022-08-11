@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Spinner</title>
+</head>
+
+<body>
+    <div class="spinner" id="spinner">
+        <img src="spinner-transparent.gif" alt="">
+    </div>
+    <div class="page-content">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti excepturi obcaecati sapiente minus corporis nesciunt,
+            quae culpa quo eveniet nam assumenda quibusdam minima! Unde ipsa sint voluptatem. Libero animi, temporibus id
+            et odio veritatis quasi perspiciatis sapiente totam nostrum? Earum facilis dolorum placeat recusandae dicta,
+            ipsum molestiae excepturi temporibus voluptatibus enim ad odit labore ipsam, et officia! Laudantium eligendi
+            repudiandae earum ipsam, perferendis neque adipisci possimus exercitationem ullam reprehenderit hic, cum minima
+            et vitae libero nam voluptatum? Illum ipsa animi dignissimos? Est quia eos, natus veritatis ratione porro odit
+            facilis minus, quidem nihil sunt dicta delectus! Tenetur doloemporibus. Exercitationem vero eligendi eveniet,
+            blanditiis hic voluptas voluptate nostrum officiis ratione perferendis, dignissimos soluta nisi eum amet repudiandae
+            neque nobis id reiciendis! Hic aut fugit aspernatur, cumque eveniet voluptatibus cum ut nemo voluptas veniam,
+            debitis aliquid, tempora saepe consequuntur. Explicabo sint excepturi, velit consequatur deleniti illo voluptas
+            recusandae incidunt id, animi atque, aperiam veritatis unde quaerat aspernatur aut? Beatae quasi qui dolorem
+            eos architecto laudantium consectetur rem dolorum ex? Nam nostrum velit quae sunt maiores ex magni incidunt,
+            dolorem tempora modi ducimus eos itaque quisquam quaerat iste?</p>
+
+        <input type="text" placeholder="Type Some Text">
+        <br>
+        <button onclick="showSpinner()">Open Full Screen Spinner</button>
+
+        <hr>
+        
+        <!-- button with loading spinner -->
+        <br>
+        <textarea oninput="textAreaOnChange()" cols="30" rows="3" placeholder="Type text and click on Save"></textarea>
+        <br>
+        <button id="btnSpinner" class="btn-spinner" onclick="btnSpinnerOnClick()" disabled>
+            <span id="btnText" class="btn-text">Save Changes</span>
+        </button>
+    </div>
+
+    <script>
+        let spinner = document.getElementById("spinner");
+        function showSpinner(){
+            spinner.classList.add("show");
+            setTimeout(()=>{
+                spinner.classList.remove("show");
+            },3000);
+            
+        }
+
+        /* button with loading spinner */
+        let btnSpinner = document.getElementById("btnSpinner");
+        let btnText = document.getElementById("btnText");
+        function btnSpinnerOnClick(){
+            btnSpinner.classList.add("btn-loading");
+            setTimeout(()=>{
+                btnSpinner.classList.remove("btn-loading");
+                btnText.innerText="Changes Saved";
+                btnSpinner.disabled=true;
+            },3000);
+        }
+        function textAreaOnChange(){
+            console.log("textAreaOnChange");
+            btnText.innerText="Save Changes";
+            btnSpinner.disabled=false;
+        }
+    </script>
+</body>
+
+</html>
