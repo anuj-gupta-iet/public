@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: rgba(173, 216, 230, 0.281);
+}
+
+.form-class{
+    /* border: 1px solid red; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.login-box-container{
+    /* border: 1px solid red; */
+    width: 380px;
+    /* height: 420px; */
+    margin: 6% auto;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    /* border: 1px solid red; */
+    padding: 20px 0;
+}
+
+hr{
+    width: 100%;
+    border: 0.01px solid #ccc;
+}
+
+.login-box-container div{
+    margin: 30px 0 0 0;
+}
+
+.input-field{
+    padding: 5px;
+    margin-left: 20px;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.input-submit{
+    padding: 10px 40px;
+    /* background: #009579; */
+    background: #8379be;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 40px 0 30px 0;
+}
+.input-submit:hover{
+    background: #5b5192;
+}
+
+.error{
+    /* border: 1px solid red; */
+    color: red;
+    margin: 0 0 30px 0 !important;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    justify-content: space-between;
+}
+
+.logout-btn{
+    padding: 5px 30px;
+    background: #8379be;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.logout-btn:hover{
+    background: #5b5192;
+}
+
+.page-container{
+    /* border: 1px solid red; */
+    background: white;
+    border-radius: 10px;
+    /* width: 70%; */
+    width: fit-content;
+    height: 100%;
+    margin: 6% auto;
+    padding: 15px 30px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+.page-container h3{
+    padding: 10px;
+}
+.page-container div{
+    display: flex;
+    align-items: center;
+}
+.page-container label{
+    margin-left: 20px;
+}
+
+.role-btn{
+    width: 200px;
+    padding: 5px 30px;
+    background: #8379be;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+    text-decoration: none;
+}
+.role-btn:hover{
+    background: #5b5192;
+}

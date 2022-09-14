@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Login Page</title>
+	<link rel="stylesheet" th:href="@{/static/css/style.css}">
+	<link th:href="@{/css/style.css}" rel="stylesheet" />
+	<link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+	<form th:action="@{/login}" th:object="${loginForm}" method="post" class="form-class">
+		<div class="login-box-container">
+			<h1>Login</h1>
+			<hr>
+			<div class="username">
+				<label for="username">Username</label>
+				<input type="text" id="username" name="username" class="input-field">
+			</div>
+			<div class="password">
+				<label for="password">Password</label>
+				<input type="password" id="password" name="password" class="input-field">
+			</div>
+			<input type="submit" value="Log In" class="input-submit">
+			<div class="error" th:if="${invalidCredentials}">
+				Invalid Credentials
+			</div>
+		</div>
+	</form>
+</body>
+
+</html>

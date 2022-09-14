@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Home Page</title>
+	<link rel="stylesheet" th:href="@{/static/css/style.css}">
+	<link th:href="@{/css/style.css}" rel="stylesheet" />
+	<link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+	<div class="header">
+		<div>
+			Welcome : <strong th:text="${username}"></strong>
+		</div>
+		<a th:href="@{/logout}" class="logout-btn">Log Out</a>
+	</div>
+	<div class="page-container">
+		<h3>Granted Roles</h3>
+		<div>
+			<a th:href="@{/getAdminData}" class="role-btn">Get Admin Data</a>
+			<label th:text="${adminMessage}"></label>
+		</div>
+		<div>
+			<a th:href="@{/getUserData}" class="role-btn">Get User Data</a>
+			<label th:text="${userMessage}"></label>
+		</div>
+		<!-- <div>
+			<a th:href="@{/getCheckerData}" class="role-btn">Get Checker Data</a>
+		</div> -->
+	</div>
+</body>
+
+</html>
