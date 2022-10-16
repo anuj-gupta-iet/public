@@ -19,7 +19,7 @@ public class MyControllerTest {
 
 	@BeforeEach
 	public void setup() {
-		// this will initilize all dependecies of class annotated with @InjectMocks i.e.
+		// this will initialize all dependencies of class annotated with @InjectMocks i.e.
 		// MyController using @Autowired annotations
 		// their setter are no longer needed
 		MockitoAnnotations.openMocks(this);

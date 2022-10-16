@@ -1,0 +1,6 @@
+logging:
+  pattern:
+    console: '[%thread] %level - %msg%n'
+    
+application:
+  property2: overriddenvalue22
