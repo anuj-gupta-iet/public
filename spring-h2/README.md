@@ -1,6 +1,9 @@
 # Getting Started
 
 ### Reference Documentation
+* h2 console url - http://localhost:8080/h2-console 
+
+### Reference Documentation
 For further reference, please consider the following sections:
 
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
