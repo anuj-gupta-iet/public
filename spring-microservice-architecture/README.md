@@ -1,3 +1,6 @@
+First of all we need to start Eureka Discovery service
+then other applications can be started with will be discovered by Service Discovery at runtime
+
 ### Creating a parent pom project e.g. spring-microservice-architecture
 * Create a Maven Project by selecting 'skip archetype selection' checkbox and select packaging as pom
 
@@ -38,7 +41,7 @@
 
 ### Creating a Zipkin server (Distributed Tracing using Sleuth and Zipkin)
 * download zipkin executable jar from maven repo
-* java -jar zipkin-server-2.12.9-exec.jar
+* java -jar zipkin-server-2.12.9-exec.jar (F:\jars)
 * dashboard http://localhost:9411/zipkin/
 
 ### Registering a microservice with Zipkin server 
