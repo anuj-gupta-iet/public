@@ -1,0 +1,2 @@
+* run mvn clean install to generate binding classes from loan_eligibility.xsd to package org.example.soap.api.loaneligibility using jaxb2-maven-plugin
+* wsdl file url - http://localhost:8080/ws/loanEligibility.wsdl
