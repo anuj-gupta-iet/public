@@ -34,10 +34,8 @@ public class SpringSecurityCustomUserTableApplication {
 	@PostMapping("/createUser")
 	public String createUser(@RequestBody UserDto userDto) {
 		// converting list of string to comma separated value
-		String authorities = userDto.getAuthorities().stream()
-				.collect(Collectors.joining(","));
-		MyUserDetails myUserDetails = new MyUserDetails(userDto.getUsername(),
-				passwordEncoder.encode(userDto.getPassword()),
+		String authorities = userDto.getAuthorities().stream().collect(Collectors.joining(","));
+		MyUserDetails myUserDetails = new MyUserDetails(userDto.getUsername(),passwordEncoder.encode(userDto.getPassword()),
 				userDto.getName(), authorities);
 		userRepository.save(myUserDetails);
 		return "User Created Successfully";
@@ -52,10 +50,8 @@ public class SpringSecurityCustomUserTableApplication {
 	@PostConstruct
 	private void init() {
 		List<MyUserDetails> users = Arrays.asList(
-				new MyUserDetails("anuj", passwordEncoder.encode("anuj"),
-						"Anuj Gupta", "ROLE_USER"),
-				new MyUserDetails("papag", passwordEncoder.encode("papag"),
-						"S C Gupta", "ROLE_ADMIN"));
+				new MyUserDetails("anuj", passwordEncoder.encode("anuj"), "Anuj Gupta", "ROLE_USER"),
+				new MyUserDetails("papag", passwordEncoder.encode("papag"), "S C Gupta", "ROLE_ADMIN"));
 		userRepository.saveAll(users);
 	}
 
