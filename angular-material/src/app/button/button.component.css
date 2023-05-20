@@ -1,0 +1,13 @@
+button{
+    margin: 10px;
+}
+
+.btn-primary-class:hover{
+	background: rgba(63, 81, 181, .7);
+}
+.btn-accent-class:hover{
+	background: rgba(255, 64, 129, .7);
+}
+.btn-warn-class:hover{
+	background: rgba(244, 67, 54, .7);
+}

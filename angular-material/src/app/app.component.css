@@ -1,0 +1,11 @@
+a {
+	margin: 10px;
+}
+
+a:hover {
+	background: rgba(63, 81, 181, .7);
+}
+
+.container {
+	margin: 0 10px;
+}

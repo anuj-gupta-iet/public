@@ -1,0 +1,20 @@
+<mat-button-toggle #toggleBtn checked disableRipple>Toggle</mat-button-toggle>
+<br>{{toggleBtn.checked}}
+
+<br><br>
+<mat-button-toggle-group #toggleGrp="matButtonToggleGroup">
+    <mat-button-toggle value="bold">Bold</mat-button-toggle>
+    <mat-button-toggle value="italic">Italic</mat-button-toggle>
+    <mat-button-toggle value="underline">Underline</mat-button-toggle>
+</mat-button-toggle-group>
+<br>
+{{toggleGrp.value}}
+
+<br><br>
+<mat-button-toggle-group #toggleGrpMultiple="matButtonToggleGroup" multiple>
+    <mat-button-toggle value="bold">Bold</mat-button-toggle>
+    <mat-button-toggle value="italic">Italic</mat-button-toggle>
+    <mat-button-toggle value="underline">Underline</mat-button-toggle>
+</mat-button-toggle-group>
+<br>
+{{toggleGrpMultiple.value}}
