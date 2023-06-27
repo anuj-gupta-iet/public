@@ -1,0 +1,9 @@
+{
+	"name": "Anuj",
+	"age": 35,
+	"address": {
+		"street": "Dundasvale court",
+		"city": "Glasgow",
+		"postcode": "G4 0HU"
+	}
+}

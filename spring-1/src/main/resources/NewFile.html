@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+const http = new XMLHttpRequest();
+//const url='https://jsonplaceholder.typicode.com/posts';
+const url='http://localhost:8080/hello';
+http.open("GET", url);
+http.send();
+
+http.onreadystatechange = (e) => {
+  console.log(http.responseText)
+}
+</script>
+</head>
+<body>
+	Body
+</body>
+</html>

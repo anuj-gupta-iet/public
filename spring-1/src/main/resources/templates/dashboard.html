@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	XYZ Bank Dashboard - Transfer Money
+	<form action="http://localhost:8080/transfer" method="post">
+		Amount: <input type="text" name="amount" value=""/>
+		Account Number: <input type="text" name="account" value=""/>
+		<!-- this hidden field will contain the token sent by server
+		and it will be resent to server on next form submission -->
+		<input type="hidden" name="token" th:value="${session.token}"/>
+		<input type="submit" value="Submit"/>
+	</form>
+</body>
+</html>
