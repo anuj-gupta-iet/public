@@ -1,0 +1,10 @@
+Basic Datepicker
+<br>
+<mat-form-field>
+    <mat-label>Choose a date</mat-label>
+    <!-- Choose a date --> 
+    <input matInput [matDatepicker]="myDatepicker" [(ngModel)]="mydate" (change)="calculateDate();">
+    <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+    <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+    <mat-datepicker #myDatepicker (change)="calculateDate();"></mat-datepicker>
+</mat-form-field>

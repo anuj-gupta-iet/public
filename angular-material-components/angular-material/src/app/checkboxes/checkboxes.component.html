@@ -1,0 +1,24 @@
+Simple checkbox <br>
+<mat-checkbox class="example-margin">Check me!</mat-checkbox>
+
+<br><br> Simple checkbox label position<br>
+<mat-checkbox class="example-margin" labelPosition="before">Check me!</mat-checkbox>
+
+<br><br> Disabled Checkbox <br>
+<mat-checkbox class="example-margin" [disabled]="true">Disabled</mat-checkbox>
+
+<br><br> Checkbox with different colors <br>
+<mat-checkbox class="example-margin" color="primary">Check me Primary</mat-checkbox>
+<br>
+<mat-checkbox class="example-margin" color="warn">Check me Warn</mat-checkbox>
+<br>
+<mat-checkbox class="example-margin" color="accent">Check me Accent</mat-checkbox>
+
+<br><br> Indeterminate checkbox<br>
+<mat-checkbox class="example-margin" indeterminate="true">Click Me</mat-checkbox>
+<br>For example <br>
+<mat-checkbox class="example-margin" indeterminate="true" #overalltaskstatus>Overall Task Status</mat-checkbox>
+<br>
+<mat-checkbox class="example-margin" #subtask1 (change)="setOverallStatus()">Subtask 1</mat-checkbox> {{subtask1.checked}}
+<mat-checkbox class="example-margin" #subtask2 (change)="setOverallStatus()">Subtask 2</mat-checkbox>  {{subtask2.checked}}
+<mat-checkbox class="example-margin" #subtask3 (change)="setOverallStatus()">Subtask 3</mat-checkbox>  {{subtask3.checked}}

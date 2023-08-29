@@ -1,0 +1,65 @@
+<!-- ======================================== -->
+Simple Matdrawer Bar with toggle button
+<button mat-button (click)="matdrawer1.toggle();toggleMethod(matdrawer1);">Toggle Button</button>
+{{matdrawer1.opened}}
+<mat-drawer-container class="example-container">
+    <mat-drawer #matdrawer1 opened>Drawer content</mat-drawer>
+    <mat-drawer-content>Main content</mat-drawer-content>
+</mat-drawer-container>
+
+<!-- ======================================== -->
+Simple Matdrawer Bar with backdrop true/false
+<button mat-button (click)="matdrawer4.toggle();">Toggle Button</button>
+<mat-drawer-container class="example-container" hasBackdrop="false">
+    <mat-drawer #matdrawer4>Drawer content</mat-drawer>
+    <mat-drawer-content>Main content Main content Main content Main content Main content </mat-drawer-content>
+</mat-drawer-container>
+
+<!-- ======================================== -->
+Simple Matdrawer Bar with open/close button
+<button mat-button (click)="matdrawer3.open();">Open Button</button>
+<button mat-button (click)="matdrawer3.close();">Close Button</button>
+<mat-drawer-container class="example-container">
+    <mat-drawer #matdrawer3 opened>Drawer content</mat-drawer>
+    <mat-drawer-content>Main content</mat-drawer-content>
+</mat-drawer-container>
+
+<!-- ======================================== -->
+Simple Matdrawer Bar with different modes
+<!-- modes are over/side/push -->
+<button mat-button (click)="matdrawer2.toggle();">Toggle Button</button>
+<mat-drawer-container class="example-container">
+    <mat-drawer #matdrawer2 opened mode="side">Drawer content</mat-drawer>
+    <mat-drawer-content>Main content</mat-drawer-content>
+</mat-drawer-container>
+
+<!-- ======================================== -->
+<!-- MatSidenav vs MatDrawer -->
+<!-- The sidenav components are designed to add side content to a fullscreen app.
+    The drawer component is designed to add side content to a small section of your app. -->
+<!-- The difference between the two components is that the sidenav component should be used for a global drawer (like a navigation drawer) while the drawer component should be used for content specific to the small portion of your app (such as allowing the user to filter files). -->
+
+Simple Sidenav bar
+<button mat-button (click)="sidenav1.toggle();">Toggle Button</button>
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav1 opened>Start</mat-sidenav>
+    <mat-sidenav-content>Main</mat-sidenav-content>
+</mat-sidenav-container>
+
+<!-- ======================================== -->
+Simple Sidenav bar with position
+<button mat-button (click)="sidenav2.toggle();sidenav3.toggle();">Toggle Button</button>
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav2 position="start" opened>Start</mat-sidenav>
+    <mat-sidenav #sidenav3 position="end" opened>End</mat-sidenav>
+    <section>Main</section>
+</mat-sidenav-container>
+
+<!-- ======================================== -->
+Simple Sidenav bar with position and side mode
+<button mat-button (click)="sidenav4.toggle();sidenav5.toggle();">Toggle Button</button>
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav4 position="start" mode="side" opened>Start</mat-sidenav>
+    <mat-sidenav #sidenav5 position="end" mode="side" opened>End</mat-sidenav>
+    <section>Main</section>
+</mat-sidenav-container>
