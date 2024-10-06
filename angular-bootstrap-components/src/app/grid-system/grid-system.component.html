@@ -1,0 +1,260 @@
+Bootstrap DOM hierarchy
+<br> Container > Row > Column > Content (Text or Images)
+<br> Screen sizes and bootstrap infixes mappings
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Screen Size</th>
+            <th scope="col">Bootstrap Class Infix</th>
+            <th scope="col">Screen Dimention</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Extra small</td>
+            <td>None</td>
+            <td>0px to 576px (it means jo devices 0 se 576px ke beech mein honge unko Extra small devices bolenge)</td>
+        </tr>
+        <tr>
+            <td>Small</td>
+            <td>sm</td>
+            <td>576px to 768px</td>
+        </tr>
+        <tr>
+            <td>Medium</td>
+            <td>md</td>
+            <td>768px to 992px</td>
+        </tr>
+        <tr>
+            <td>Large</td>
+            <td>lg</td>
+            <td>992px to 1200px</td>
+        </tr>
+        <tr>
+            <td>Extra large</td>
+            <td>xl</td>
+            <td>1200px to 1400px</td>
+        </tr>
+        <tr>
+            <td>Extra extra large</td>
+            <td>xxl</td>
+            <td>1400px and above</td>
+        </tr>
+    </tbody>
+</table>
+======== Containers ========
+<br> Current Screen Width: {{screenWidth}}
+<div class="containers">
+    Simple Container:
+    <br> Iska matlab Small devices (0-576px) aur usse upar walon ke liye left/right margin rahenge
+    <br> Small Devices se neeche walon ke liye Width 100% rahegi
+    <div class="container">
+        .container
+    </div>
+
+    Medium Container:
+    <br> Iska matlab Medium devices (576-768px) aur usse upar walon ke liye left/right margin rahenge
+    <br> Medium Devices se neeche walon ke liye Width 100% rahegi
+    <div class="container-md">
+        .container-md
+    </div>
+
+    XL Container:
+    <br> Iska matlab Extra Large devices (1200-1400px) aur usse upar walon ke liye left/right margin rahenge
+    <br> Extra Devices se neeche walon ke liye Width 100% rahegi
+    <div class="container-xl">
+        .container-xl
+    </div>
+
+    Fluid Container:
+    <br> Iska matlab sabhi devices ke liye Width 100% rahegi
+    <div class="container-fluid">
+        .container-fluid
+    </div>
+</div>
+Current Screen Width: {{screenWidth}}
+<br> ======== Row & Columns ========
+<br>
+<div class="container-fluid example1">
+    Equal Width Columns
+    <br> Matlab sab column ki width same hogi
+    <br> 3 columns
+    <div class="row">
+        <div class="col">
+            Col1
+        </div>
+        <div class="col">
+            Col2
+        </div>
+        <div class="col">
+            Col3
+        </div>
+    </div>
+    12 Columns
+    <div class="row">
+        <div class="col">
+            Col1
+        </div>
+        <div class="col">
+            Col2
+        </div>
+        <div class="col">
+            Col3
+        </div>
+        <div class="col">
+            Col4
+        </div>
+        <div class="col">
+            Col5
+        </div>
+        <div class="col">
+            Col6
+        </div>
+        <div class="col">
+            Col7
+        </div>
+        <div class="col">
+            Col8
+        </div>
+        <div class="col">
+            Col9
+        </div>
+        <div class="col">
+            Col10
+        </div>
+        <div class="col">
+            Col11
+        </div>
+        <div class="col">
+            Col12
+        </div>
+    </div>
+    Setting one column width wider
+    <br> matlab Col2 ki width jyada hogi (col-6)
+    <div class="row">
+        <div class="col">
+            Col1
+        </div>
+        <div class="col-6">
+            Col2 (wider)
+        </div>
+        <div class="col">
+            Col3
+        </div>
+    </div>
+    Setting column widthx specifically for medium devices
+    <br> Iska matlab Medium devices (576-768px) aur usse upar walon ke liye Col1 ki width half rahegi (col-6)
+    <br> Aur isse chote devices per Col1 ki width col-12 set ho jayegi (means full width)
+    <div class="row">
+        <div class="col-md-6">
+            Col1 .col-md-6
+        </div>
+    </div>
+    Yahan pe Col1,Col2,Col3 ki width 6,4,2 hogi for Medium devices (or larger)
+    <br> aur usse neeche devices ke liye sabhi Cols ki width by default wali hogi (which is 12)
+    <div class="row">
+        <div class="col-md-6">
+            Col1
+        </div>
+        <div class="col-md-4">
+            Col2
+        </div>
+        <div class="col-md-2">
+            Col3
+        </div>
+    </div>
+    Setting different column widths for different devices
+    <br> Matlab Col1,Col2,Col3 ki width 6,4,2 hogi for medium devices (or larger)
+    <br> Aur Col1,Col2,Col3 ki width 2,4,6 hogi for small devices (not for medium - kyuki hum woh upar set ker chuke hai)
+    <br>
+    <div class="row">
+        <div class="col-md-6 col-sm-2">
+            Col1
+        </div>
+        <div class="col-md-4 col-sm-4">
+            Col2
+        </div>
+        <div class="col-md-2 col-sm-6">
+            Col3
+        </div>
+    </div>
+    Inner Columns example
+    <br> Remember that Inner Column cannot directly go inside Outside Column
+    <br> Container > Row > Outer Column > Inner Row > Inner Column > Content (Text or Images)
+    <br> yahan pe Col1 ke andar 4 inner columns hai inner-col1,2,3,4
+    <br> Outer Col1,Col2,Col3,Col4 ki width 6,2,2,2 set ki gayi hai for large devices (my laptop device)
+    <br> inner col1,col2,col3,col4 ki width 3,3,3,3 set ki gayi hai for large devices
+    <br> ab jab mein screen size ko medium tak reduce karunga tab sabhi Outer columns ki width 12 set ho jayegi by default
+    <br> aur inner columns col1,2,3,4 ki 12,4,4,4 set ho jayegi (jaisa ki maine set kiya hai)
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-lg-3 col-md-12">
+                    Inner-Col1
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    Inner-Col2
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    Inner-Col3
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    Inner-Col4
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2">
+            Col2
+        </div>
+        <div class="col-lg-2">
+            Col3
+        </div>
+        <div class="col-lg-2">
+            Col4
+        </div>
+    </div>
+    Customizing Grid Columns Layout
+    <br> iss example mein hum row level pe bata sakte hai ki ek row mein kitne column hone chahiye
+    <br> jaise below grid mein 1 row mein 3 columns hone chahiye (using row-cols-3)
+    <div class="row row-cols-3">
+        <div class="col">Col</div>
+        <div class="col">Col</div>
+        <div class="col">Col</div>
+        <div class="col">Col</div>
+        <div class="col">Col</div>
+        <div class="col">Col</div>
+        <div class="col">Col</div>
+    </div>
+
+</div>
+================================
+<br> Below is typical Dashboard with sections Header, Left Nav Bar, Right Nav Bar, Main Content, Footer
+<br> we are customizing the grid for Laptop (Large-lg) and Mobile (Small-sm)
+<div class="container-fluid dashboard-example">
+    this is without any grid customization
+    <div class="row">
+        <div class="col header">Header</div>
+        <div class="col left-nav">Left Nav Bar</div>
+        <div class="col main-content">Main Content</div>
+        <div class="col right-nav">Right Nav Bar</div>
+        <div class="col footer">Footer</div>
+    </div>
+    with customization for laptop (lg) and mobile (sm)
+    <div class="row">
+        <div class="col header col-lg-12 col-sm-12">Header</div>
+        <div class="col left-nav col-lg-2 col-sm-12">Left Nav Bar</div>
+        <div class="col main-content col-lg-8 col-sm-10">Main Content</div>
+        <div class="col right-nav col-lg-2 col-sm-2">Right Nav Bar</div>
+        <div class="col footer col-lg-12 col-sm-12">Footer</div>
+    </div>
+    Note: aap observe kariyega ki jab hum screen size extra small tak reduce kerte hai toh columns firse pehle jaise horizontally align ho jaate hai <br>
+    aaisa isliye kyuki woh size extra small ho jaata hai aur uske liye 'col-12' use kerna padega e.g. if u didnt use any infix then its for extra small
+    jaise below grid extra small ke liye hoga
+    <div class="row">
+            <div class="col header col-lg-12 col-sm-12 col-12">Header</div>
+            <div class="col left-nav col-lg-2 col-sm-12 col-12">Left Nav Bar</div>
+            <div class="col main-content col-lg-8 col-sm-10 col-12">Main Content</div>
+            <div class="col right-nav col-lg-2 col-sm-2 col-12">Right Nav Bar</div>
+            <div class="col footer col-lg-12 col-sm-12 col-12">Footer</div>
+        </div>
+</div>

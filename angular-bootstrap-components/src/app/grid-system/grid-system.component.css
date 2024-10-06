@@ -1,0 +1,34 @@
+.containers div {
+    background-color: bisque;
+    height: 70px;
+}
+
+.example1 div {
+    border: 1px solid peru;
+    text-align: center;
+}
+
+.dashboard-example div .col {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.dashboard-example .header {
+    background-color: lightblue;
+}
+
+.dashboard-example .left-nav {
+    background-color: lightgray;
+}
+
+.dashboard-example .main-content {
+    background-color: lightgreen;
+}
+
+.dashboard-example .right-nav {
+    background-color: lightpink;
+}
+
+.dashboard-example .footer {
+    background-color: lightyellow;
+}

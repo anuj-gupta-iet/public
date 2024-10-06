@@ -1,6 +1,10 @@
-.container {
+.router-container {
 	margin: 0 10px;
+	/* border: 1px solid red; */
 }
 .btn-container {
 	margin: 10px;
+}
+.btn-container a{
+	margin-right: 15px;
 }

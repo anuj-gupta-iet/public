@@ -1,0 +1,70 @@
+Container > Row > Column > Content (Text or Images)
+<br> Screen sizes and bootstrap infixes mappings
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Screen Size</th>
+            <th scope="col">Bootstrap Class Infix</th>
+            <th scope="col">Screen Dimention</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Extra small</td>
+            <td>None</td>
+            <td>0px to 576px</td>
+        </tr>
+        <tr>
+            <td>Small</td>
+            <td>sm</td>
+            <td>576px to 768px</td>
+        </tr>
+        <tr>
+            <td>Medium</td>
+            <td>md</td>
+            <td>768px to 992px</td>
+        </tr>
+        <tr>
+            <td>Large</td>
+            <td>lg</td>
+            <td>992px to 1200px</td>
+        </tr>
+        <tr>
+            <td>Extra large</td>
+            <td>xl</td>
+            <td>1200px to 1400px</td>
+        </tr>
+        <tr>
+            <td>Extra extra large</td>
+            <td>xxl</td>
+            <td>1400px and above</td>
+        </tr>
+    </tbody>
+</table>
+Current Screen Width: {{screenWidth}}
+<br> Simple Container:
+<br> In this container there is always Left and right margins except when screen size goes below 540px, in that case screen width
+will be 100%
+<div class="container">
+    .container
+</div>
+
+Medium Container:
+<br> In this container there is always Left and right margins except when screen size goes below 720px, in that case screen width
+will be 100%
+<div class="container-md">
+    .container-md
+</div>
+
+XXL Container:
+<br> In this container there is always Left and right margins except when screen size goes below 1200px, in that case screen
+width will be 100%
+<div class="container-xxl">
+    .container-xxl
+</div>
+
+Fluid Container:
+<br> In this container there will be no Left and right margins for all screen sizes
+<div class="container-fluid">
+    .container-fluid
+</div>

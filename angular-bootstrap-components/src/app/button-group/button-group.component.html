@@ -1,0 +1,50 @@
+Basic button group
+<br> Clicked button: {{btn_name}}
+<br>
+<div class="btn-group">
+    <button type="button" class="btn btn-primary" (click)="btnClicked('left')">Left</button>
+    <button type="button" class="btn btn-primary" (click)="btnClicked('middle')">Middle</button>
+    <button type="button" class="btn btn-primary" (click)="btnClicked('right')">Right</button>
+</div>
+<br> Active Button group
+<br> Clicked button: {{active_btn_name}}
+<br>
+<div class="btn-group">
+    <button type="button" class="btn btn-primary" [ngClass]="{'active':active_btn_name=='left'}" (click)="btnClickedActive('left')">Left</button>
+    <button type="button" class="btn btn-primary" [ngClass]="{'active':active_btn_name=='middle'}" (click)="btnClickedActive('middle')">Middle</button>
+    <button type="button" class="btn btn-primary" [ngClass]="{'active':active_btn_name=='right'}" (click)="btnClickedActive('right')">Right</button>
+</div>
+<br> Active Button group with outlined style
+<br> Clicked button: {{active_outlined_btn_name}}
+<br>
+<div class="btn-group">
+    <button type="button" class="btn btn-outline-primary" [ngClass]="{'active':active_outlined_btn_name=='left'}" (click)="btnClickedActiveOutlined('left')">Left</button>
+    <button type="button" class="btn btn-outline-primary" [ngClass]="{'active':active_outlined_btn_name=='middle'}" (click)="btnClickedActiveOutlined('middle')">Middle</button>
+    <button type="button" class="btn btn-outline-primary" [ngClass]="{'active':active_outlined_btn_name=='right'}" (click)="btnClickedActiveOutlined('right')">Right</button>
+</div>
+<br> Checkbox Button group
+<br>{{chk_box_1}},{{chk_box_2}},{{chk_box_3}}
+<br>
+<div class="btn-group">
+    <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" [(ngModel)]="chk_box_1">
+    <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+
+    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" [(ngModel)]="chk_box_2">
+    <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
+
+    <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off" [(ngModel)]="chk_box_3">
+    <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
+</div>
+<br> Radio Button group
+<br>{{radio_box_val}}
+<br>
+<div class="btn-group" role="group">
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" value="val1" [(ngModel)]="radio_box_val">
+    <label class="btn btn-outline-primary" for="btnradio1">Radio 1</label>
+
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" value="val2" [(ngModel)]="radio_box_val">
+    <label class="btn btn-outline-primary" for="btnradio2">Radio 2</label>
+
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" value="val3" [(ngModel)]="radio_box_val">
+    <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label>
+</div>
