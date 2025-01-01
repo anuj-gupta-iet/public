@@ -47,7 +47,8 @@ public class SpringMultipleDatabaseApplication {
 
 @Configuration
 @EnableJpaRepositories(
-		// all Repositories inside this package "UserRepository" will follow this configuration
+		// all Repositories inside this package "com.example.demo.user" e.g. "UserRepository" 
+		// will follow this configuration
 		basePackages = "com.example.demo.user", 
 		entityManagerFactoryRef = "userEntityManager", 
 		transactionManagerRef = "userTransactionManager")
@@ -92,7 +93,8 @@ class UserDBConfig {
 
 @Configuration
 @EnableJpaRepositories(
-		// all Repositories inside this package "ProductRepository" will follow this configuration
+		// all Repositories inside this package "com.example.demo.product" e.g. "ProductRepository" 
+		// will follow this configuration
 		basePackages = "com.example.demo.product", 
 		entityManagerFactoryRef = "productEntityManager", 
 		transactionManagerRef = "productTransactionManager")
