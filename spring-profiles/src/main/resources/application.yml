@@ -5,3 +5,10 @@ logging:
 application:
   property1: value1
   property2: value2
+
+#below config is used with SpringProfilesEx2Application
+#if we set this profile then corresponding ServiceBean init method is called
+spring:
+  profiles:
+    active:
+    - profileTwo
