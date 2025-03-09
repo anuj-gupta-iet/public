@@ -1,0 +1,11 @@
+# this is a dummy file just for avoiding below error
+# Liquibase failed to start because no changelog could be found at 'classpath:/db/changelog/db.changelog-master.yaml'.
+# this file is only used by SpringLiquibaseChangesetGeneratorApplication
+databaseChangeLog:
+  - changeSet:
+      id: "1"
+      author: anujdummyuser
+    
+name: db.changelog-master-dummy.yaml
+environment: testing
+is-enabled: false
