@@ -58,6 +58,17 @@ class UserDBConfig {
 
 	@Bean
 	@Primary
+	public DataSource userDataSource() {
+		DriverManagerDataSource dataSource = new DriverManagerDataSource();
+		dataSource.setUrl(env.getProperty("user.jdbc.url"));
+		dataSource.setUsername(env.getProperty("jdbc.user"));
+		dataSource.setPassword(env.getProperty("jdbc.pass"));
+		dataSource.setDriverClassName(env.getProperty("jdbc.driverClassName"));
+		return dataSource;
+	}
+	
+	@Bean
+	@Primary
 	public LocalContainerEntityManagerFactoryBean userEntityManager() {
 		LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
 		em.setDataSource(userDataSource());
@@ -67,19 +78,15 @@ class UserDBConfig {
 		properties.put("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
 		properties.put("hibernate.dialect", env.getProperty("hibernate.dialect"));
 		properties.put("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
+		// below 2 properties are to automatically convert camelCase columns in Entity
+		// to snake case columns in DB
+		// e.g. employeeName column in POJO will be automatically converted to
+		// employee_name in DB
+		properties.put("hibernate.implicit_naming_strategy", "org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy");
+		properties.put("hibernate.physical_naming_strategy", "org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy");
+		
 		em.setJpaPropertyMap(properties);
 		return em;
-	}
-
-	@Bean
-	@Primary
-	public DataSource userDataSource() {
-		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setDriverClassName(env.getProperty("jdbc.driverClassName"));
-		dataSource.setUrl(env.getProperty("user.jdbc.url"));
-		dataSource.setUsername(env.getProperty("jdbc.user"));
-		dataSource.setPassword(env.getProperty("jdbc.pass"));
-		return dataSource;
 	}
 
 	@Bean
@@ -103,6 +110,16 @@ class ProductDBConfig {
 	private Environment env;
 
 	@Bean
+	public DataSource productDataSource() {
+		DriverManagerDataSource dataSource = new DriverManagerDataSource();
+		dataSource.setUrl(env.getProperty("product.jdbc.url"));
+		dataSource.setUsername(env.getProperty("jdbc.user"));
+		dataSource.setPassword(env.getProperty("jdbc.pass"));
+		dataSource.setDriverClassName(env.getProperty("jdbc.driverClassName"));
+		return dataSource;
+	}
+	
+	@Bean
 	public LocalContainerEntityManagerFactoryBean productEntityManager() {
 		LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
 		em.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
@@ -112,18 +129,15 @@ class ProductDBConfig {
 		properties.put("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
 		properties.put("hibernate.dialect", env.getProperty("hibernate.dialect"));
 		properties.put("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
+		// below 2 properties are to automatically convert camelCase columns in Entity
+		// to snake case columns in DB
+		// e.g. employeeName column in POJO will be automatically converted to
+		// employee_name in DB
+		properties.put("hibernate.implicit_naming_strategy", "org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy");
+		properties.put("hibernate.physical_naming_strategy", "org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy");
+		
 		em.setJpaPropertyMap(properties);
 		return em;
-	}
-
-	@Bean
-	public DataSource productDataSource() {
-		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setDriverClassName(env.getProperty("jdbc.driverClassName"));
-		dataSource.setUrl(env.getProperty("product.jdbc.url"));
-		dataSource.setUsername(env.getProperty("jdbc.user"));
-		dataSource.setPassword(env.getProperty("jdbc.pass"));
-		return dataSource;
 	}
 
 	@Bean
