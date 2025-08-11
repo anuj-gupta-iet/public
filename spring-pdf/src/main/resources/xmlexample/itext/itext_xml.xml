@@ -1,0 +1,11 @@
+<!-- example.xml -->
+<data>
+  <item id="1">
+    <name>Item One</name>
+    <description>First item description.</description>
+  </item>
+  <item id="2">
+    <name>Item Two</name>
+    <description>Second item description.</description>
+  </item>
+</data>
