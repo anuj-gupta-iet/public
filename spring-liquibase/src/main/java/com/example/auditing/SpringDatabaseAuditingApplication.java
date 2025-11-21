@@ -28,6 +28,14 @@ import lombok.Data;
  * here we have annotated Employee table with @Audited
  * so now every operation in this table will be audited in employee_aud table
  * 
+ * for programmatically getting current revision number
+ * 
+ * @Autowired
+ * private EntityManager entityManager;
+ * 
+ * AuditReader auditReader = AuditReaderFactory.get(entityManager);
+ * RevInfo revisionEntity = auditReader.getCurrentRevision(RevInfo.class, true);
+ * Long currentRevisionNumber = revisionEntity.getRev();
  */
 
 @SpringBootApplication
