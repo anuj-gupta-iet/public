@@ -31,6 +31,7 @@ public class SpringPostgresAdvisoryLockApplication {
 		reentrantLockService.doSomething();
 	}
 
+	// e.g. /testPostgres/u1,u2,u3
 	@GetMapping("/testPostgres/{unitIds}")
 	public void testRedisEndpoint(@PathVariable List<String> unitIds) throws InterruptedException {
 		postgresLockService.doSomething(unitIds);
