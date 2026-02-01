@@ -9,14 +9,7 @@ import org.apache.commons.lang3.BooleanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
-import org.springframework.data.redis.connection.RedisConnectionFactory;
-import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
-import org.springframework.data.redis.connection.lettuce.LettuceClientConfiguration;
-import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -126,6 +119,7 @@ class PostgresSQLLock {
 		return isSuccess;
 	}
 
+	@SuppressWarnings("unused")
 	public void unlock(List<String> unitIds) {
 		for (String unitId : unitIds) {
 			long lockId = Math.abs(unitId.hashCode()) % (1L << 31);// use positive int range
@@ -157,33 +151,3 @@ class MyReentrantLockService {
 	}
 }
 
-@Configuration
-class RedisConfig {
-
-	@Bean
-	public RedisConnectionFactory connectionFactory() {
-		// for single redis host
-		RedisStandaloneConfiguration configuration = new RedisStandaloneConfiguration();
-		configuration.setHostName("<redis-hostname>");
-		configuration.setPort(6379);
-		configuration.setPassword("<password>");
-
-		return new LettuceConnectionFactory(configuration, LettuceClientConfiguration.builder().useSsl().build());
-
-		// for clustered redis hosts
-		// RedisClusterConfiguration configuration = new
-		// RedisClusterConfiguration(Collections
-		// .singletonList("<redis-hostname>:<port>"));
-		// configuration.setPassword("<password>");
-		// return new LettuceConnectionFactory(configuration,
-		// LettuceClientConfiguration.builder().useSsl().build());
-	}
-
-	@Bean
-	public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory connectionFactory) {
-		RedisTemplate<String, Object> template = new RedisTemplate<>();
-		template.setConnectionFactory(connectionFactory);
-		return template;
-	}
-
-}
