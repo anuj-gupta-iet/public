@@ -35,6 +35,22 @@
 			<artifactId>jedis</artifactId>
 		</dependency>
 		
+		<!-- for SpringRedisDistributedLockApplication -->
+		<!-- for Redis Distributed Lock --> 
+		<dependency>
+			<groupId>org.springframework.integration</groupId>
+			<artifactId>spring-integration-redis</artifactId>
+		</dependency>
+		
+		<!-- for postgres advisory lock -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-lang3</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
